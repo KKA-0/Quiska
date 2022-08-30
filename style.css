@@ -193,3 +193,85 @@ html {
     padding: 10px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body{
+    background-color: #ffcc00;
+    height: 600px;
+}
+.login_form{
+    margin-top: 25%;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 1px 36px 5px rgba(0,0,0,0.28);
+    border-radius: 5px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+  }
+
+.form_btn{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    border: none;
+    color: #fff;
+    width: 100%
+}
+
+.label_txt{
+    font-size: 12px;
+}
+.form-control{border-radius: 50px}
+.signup_form{
+    background: #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    box-shadow: 0px 1px 36px 5px rgba(0,0,0,0.28);
+    border-radius: 5px;
+}
+.logo1{
+    height:50px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.errmsg{
+    margin: 2px auto;
+    border-radius: 5px;
+    border: 1px solid red;
+    background: pink;
+    text-align: left;
+    color: brown;
+    padding: 1px;
+}
+.succssmsg{
+    margin: 5px auto;
+    border-radius: 5px;
+    border: 1px solid green;
+    background: #33CC00;
+    text-align: left;
+    color: white;
+    padding: 10px;
+}
