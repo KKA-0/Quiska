@@ -62,7 +62,7 @@ a.login{
 .box2{
     height: 100vh;
     width: 100%;
-    background-image: url(img2.jpg);
+    background-image: url(img2.webp);
     background-size: cover;
     background-position: center;
     display: table;
@@ -71,7 +71,7 @@ a.login{
 .box3{
     height: 100vh;
     width: 100%;
-    background-image: url(img4.jpg);
+    background-image: url(img4.webp);
     background-size: cover;
     background-position: center;
     display: table;
