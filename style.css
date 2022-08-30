@@ -47,12 +47,14 @@ a.active,a:hover{
 }
 a.login{
     background: #FF99C8;
-    transition: .5s;
+    
+
+
 }
 .box1{
     height: 100vh;
     width: 100%;
-    background-image: url(img1.webp);
+    background-image: url(img1.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -60,9 +62,9 @@ a.login{
 }
 
 .box2{
-    height: 100vh;
+    height: 100px;
     width: 100%;
-    background-image: url(img2.webp);
+    background-image: url(img2.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -71,7 +73,7 @@ a.login{
 .box3{
     height: 100vh;
     width: 100%;
-    background-image: url(img4.webp);
+    background-image: url(img4.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -160,4 +162,34 @@ h4{
     padding: 20px;
     background: #2c3e50;
     color: #A9DEF9;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.quiz{
+    height: 500px;
+    background: #1b9bff;
+
+}
+
+.footer{
+    background: #4a637c;
+    height: 170px;
+}
+
+
+.contact{
+    height: 600px;
+    background-color: #E4C1F9;
+}
+.box4{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    background: #FF99C8;
+    height: 100px;
+    padding: 10px;
+
 }
