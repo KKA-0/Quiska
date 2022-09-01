@@ -64,20 +64,20 @@ a.login{
 .box2{
     height: 100px;
     width: 100%;
-    background: lightcoral;
+    background: darkblue;
     background-size: cover;
     background-position: center;
     display: table;
     background-attachment: fixed;
 }
 .box3{
-    height: 100vh;
+    height: 120vh;
     width: 100%;
-    background-image: url(img4.webp);
+    background-image: url(img2.webp);
     background-size: cover;
     background-position: center;
     display: table;
-    background-attachment: fixed;
+    
 }
 h1{
     font-family: sans-serif;
