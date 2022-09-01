@@ -44,17 +44,27 @@ nav ul li a{
 a.active,a:hover{
     background: #1b9bff;
     transition: .5s;
+    text-shadow: 2px 3px 0px #2c3e50;
+    
+    border-style: solid;
 }
 a.login{
     background: #FF99C8;
+    border-style: solid;
+
+}
+a.test{
+   
+    border-style: solid;
+}
     
 
 
-}
+
 .box1{
     height: 100vh;
     width: 100%;
-    background-image: url(img1.webp);
+    background-image: url(test.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -197,7 +207,12 @@ html {
 
 
 
-
+a{
+    text-shadow: 3px 3px 3px #2c3e50;
+    font-family: Helvetica;
+    font-weight: bolder;
+    font-size: 50px;
+}
 
 
 
