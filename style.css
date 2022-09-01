@@ -64,7 +64,7 @@ a.login{
 .box2{
     height: 100px;
     width: 100%;
-    background-image: url(img2.jpg);
+    background-image: url(img3.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -169,7 +169,7 @@ html {
   }
 
 .quiz{
-    height: 500px;
+    height: 700px;
     background: #1b9bff;
 
 }
