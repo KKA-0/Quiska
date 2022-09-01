@@ -68,7 +68,6 @@ a.login{
     background-size: cover;
     background-position: center;
     display: table;
-    background-attachment: fixed;
 }
 .box3{
     height: 120vh;
