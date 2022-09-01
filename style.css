@@ -54,7 +54,7 @@ a.login{
 .box1{
     height: 100vh;
     width: 100%;
-    background-image: url(img1.webp);
+    background-image: url();
     background-size: cover;
     background-position: center;
     display: table;
