@@ -213,20 +213,6 @@ a{
     font-weight: bolder;
     font-size: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .body{
     background-color: #ffcc00;
     height: 600px;
@@ -291,39 +277,42 @@ a{
 }
 
 
-.body1{
-    background: #E4C1F9;
+.hi{
+    background: #ffffff;
+    height: 60%;
+    width: 100%;
+    border-style:ridge;
+    padding: 40px;
 }
 
-.card {
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
-    grid-template-areas: "image" "text" "stats";
-      
-    border-radius: 18px;
-    background: white;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    font-family: roboto;
-    text-align: center;
+.hi2{
+    display: flex;
+    flex-wrap: wrap;
 }
-.card-image {
-    grid-area: image;
-  }
-  .card-text {
-    grid-area: text;
-  }
-  .card-stats {
-    grid-area: stats; 
-  }
-  .card-image {
-    grid-area: image;
-    background: url("img1.jpg");
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-  }
-.emp{
-    background: #A9DEF9;
+
+.hi3{
+    background: rgb(255, 255, 255);
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+   
+}
+.img10{
+    height: 50px;
+    width: 50px;
+    line-height: 80px;
+    margin: 10px;
+}
+
+.hi4{
+    padding: 40px;
+    background: #1b9bff;
+}
+
+.hi5{
     
+    background: #1b9bff;
 }
