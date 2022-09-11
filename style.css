@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -14,6 +19,9 @@ nav{
     background: #A9DEF9;
     height: 80px;
     width: 100%;
+    position: sticky;
+    top: 0;
+
 }
 
 label.logo{
@@ -22,6 +30,7 @@ label.logo{
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
+    text-shadow: #2c3e50;
 }
 nav ul{
     float: right;
@@ -64,11 +73,32 @@ a.test{
 .box1{
     height: 100vh;
     width: 100%;
-    background-image: url(test.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(bg1.jpg);
     background-size: cover;
     background-position: center;
-    display: table;
-    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    
+   
+    
+   
+}
+.typer{
+    color: #fff !important;
+    font-family: cursive !important;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1) !important;
+   
+
+
 }
 
 .box2{
