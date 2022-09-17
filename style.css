@@ -76,7 +76,11 @@ a.test{
     height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+<<<<<<< HEAD
     url(bg\ \(1\).webp);
+=======
+    url(https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg);
+>>>>>>> fa48be9b76f644f348ab84dc5720d4f14d4a751e
     background-size: cover;
     background-position: center;
     display: flex;
@@ -356,6 +360,7 @@ a{
     
     background: #1b9bff;
 }
+<<<<<<< HEAD
 
 .cropped {
     width: 250px; /* width of container */
@@ -456,3 +461,5 @@ a{
     padding-top: 15px;
     padding-left: 10px;
 }
+=======
+>>>>>>> fa48be9b76f644f348ab84dc5720d4f14d4a751e
