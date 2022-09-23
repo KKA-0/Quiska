@@ -76,11 +76,7 @@ a.test{
     height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-<<<<<<< HEAD
     url(bg\ \(1\).webp);
-=======
-    url(https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg);
->>>>>>> fa48be9b76f644f348ab84dc5720d4f14d4a751e
     background-size: cover;
     background-position: center;
     display: flex;
@@ -229,7 +225,7 @@ html {
 
 
 .contact{
-    height: 600px;
+    height: 625px;
     background-color: #E4C1F9;
 }
 .box4{
@@ -360,7 +356,8 @@ a{
     
     background: #1b9bff;
 }
-<<<<<<< HEAD
+
+
 
 .cropped {
     width: 250px; /* width of container */
@@ -376,6 +373,16 @@ a{
     overflow: hidden;
     border: 2px solid black;
     padding-left: 35px;
+    
+    
+}
+.cropped4 {
+    width: 250px !important; /* width of container */
+    height: 100px !important; /* height of container */
+    overflow: hidden;
+    border: 2px solid black;
+    padding-left: -35px;
+    
     
     
 }
@@ -423,6 +430,9 @@ a{
     border-radius: 10px;
 }
 
+
+
+
 .glow-on-hover:active {
     color: #000
 }
@@ -461,5 +471,72 @@ a{
     padding-top: 15px;
     padding-left: 10px;
 }
-=======
->>>>>>> fa48be9b76f644f348ab84dc5720d4f14d4a751e
+.buttonw4{
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+
+.fit{
+    height: 100px;
+    width: 250px;
+    object-fit:cover;
+}
+
+.contactcss{
+    text-align: center;
+    
+    font-size: 25px;
+    
+    padding-top: 30px;
+    
+}
+
+.poscon{
+
+    
+    font-family: cursive;
+    background: rgb(248, 248, 248);
+    margin: 40px;
+    height: 450px;
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    
+    
+    
+    
+}
+
+.con{
+    font-family: cursive;
+}
+.form-control1{
+    border-radius: 5px;
+    width: 70%;
+    padding: 20px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid;
+    box-sizing: border-box;
+    
+}
+
+.form-controlmsg{
+    border-radius: 5px;
+    width: 70%;
+    padding: 20px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid;
+    box-sizing: border-box;
+    padding-bottom: 90px;
+    
+}
+
+.sub{
+    padding-top: 20px;
+}
+.label_txt2{
+    text-align: left;
+}
