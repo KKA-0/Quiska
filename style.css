@@ -16,12 +16,13 @@ body{
 
 }
 nav{
-    background: #A9DEF9;
+    background: #4db5ff;
     height: 80px;
     width: 100%;
     position: sticky;
     top: 0;
-
+    z-index: 100;
+    
 }
 
 label.logo{
@@ -68,10 +69,6 @@ a.test{
    
     border-style: solid;
 }
-    
-
-
-
 .box1{
     height: 100vh;
     width: 100%;
@@ -165,10 +162,11 @@ h1{
         height: 100vh;
         background: #2c3e50;
         top: 80px;
-        
+        z-index: 100;
         left: -100%;
         text-align: center;
         transition: all .5s; 
+
     }
     nav ul li{
         display: block;
@@ -186,11 +184,6 @@ h1{
         
     }
 }
-
-
-
-
-
 
 .footer{
     padding: 30px ;
