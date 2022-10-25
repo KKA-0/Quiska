@@ -1,7 +1,7 @@
 <?php
 session_start();
 $dbHost = 'localhost';
-$dbName = 'mydb';
+$dbName = 'quiska';
 $dbUsername = 'root';
 $dbPassword = '';
 $dbc=mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);

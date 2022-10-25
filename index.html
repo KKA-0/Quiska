@@ -18,22 +18,27 @@
     </label>    
     <label class="logo" href="asdf.com">Quiska</label>
     <ul>
-    <li><a class="active" href="#">Home <i class="fas fa-home"></i></a></li>
-    <li><a class="test" href="#quiz">Quizs</a></li>
-    <li><a class="test" href="#about">About</a></li>
-    <li><a class="test" href="#contact">Contact</a></li>
-    <li><a class="login" href="login.html">Login/Signup</i></a></li>
+    <li><a class="active" id="home" href="#">Home <i class="fas fa-home"></i></a></li>
+    <li><a class="test" id="quiz" href="#quiz">Quizs</a></li>
+    <li><a class="test" id="about" href="#about">About</a></li>
+    <li><a class="test" id="contact" href="#contact">Contact</a></li>
+    <li><a class="login" id="login" href="login.html">Login/Signup</i></a></li>
     </ul>
    </nav>
     <!--Nav bar End-->
 <!-- Parallex shit start-->
 <div class="box1">
-   
-    <h1>Quiz
-        <span class="typer" id="main" data-words="For Friends.,For Fun.,For Knowledge., For You." data-delay="100" data-deleteDelay="500"></span>
-        <span class="cursor" data-owner="main"></span>
-      </h1><br>
-      <p>Quizs made Simple and Fun</p>
+    
+   <br>
+   <div class="start">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+   <p id='head1' class='header'>Quizs Made </p>
+   <p id='head2' class='header'>Simple</p>
+   <p id='head3' class='header'>And Fun</p>
+   <p id='head4' class='header'>Test Yourself or Others</p>
+   <p id='head5' class='header'>Welcome to Quiska</p>
+</div>
+
       <div class="buttonww">
         <button class="glow-on-hover" type="button" onclick="window.location.href='dashboard.html';">CREATE QUIZ</button>
       </div>
@@ -62,18 +67,18 @@
 
 </div>
 <div class="poscon">
-<form action="" class="contactcss">
+<form action="form.php" method="POST" class="contactcss">
     <div class="form-group1">
         <label class="label_txt1">Name:</label>
-        <input type="text" class="form-control1" placeholder="Enter Your Name" required>
+        <input type="text" name="name" class="form-control1" placeholder="Enter Your Name" required>
     </div>
     <div class="form-group1">
         <label class="label_txt1">Email:</label>
-        <input type="email" class="form-control1" placeholder="Enter Your Email" required>
+        <input type="email" name="email" class="form-control1" placeholder="Enter Your Email" required>
     </div>
     <div class="form-group1">
         <label class="label_txt2">Message:</label>
-        <input type="text-area" class="form-controlmsg" placeholder="Enter Your Message" required>
+        <input type="text-area"  name="message"class="form-controlmsg" placeholder="Enter Your Message" required>
     </div>
     <div class="sub">
         <label class="label_txt1"></label>
@@ -83,14 +88,33 @@
 </div>
 </section>
 <!-- Parallex shit end-->
-<section>
-<div class="footer">
+<section class="footer">
+<div class="footer1">
+
 <footer>
+<div class="contacts">
+    <h5 >Terms and Conditions</h5>
+    <br>
+    
+    <h5 >Privacy Policy </h5>
+    <br>
+    <h5 >Contact Us </h5>
+
+</div>
+    
+    <br>
+    <hr>
+    <br>
     <h4>Made by Karan Agarwal</h4> 
     
     <h4>Follow us on: <i class="fa-brands fa-instagram"></i></h4>
+    <br><h6 class="copy"> © Quiska.quantgam.com, Inc. All rights reserved.</h6>
+<br>
+
 </footer>
 </div></section>
+
+<script src="javascript.js"></script>
 </body>
 
 

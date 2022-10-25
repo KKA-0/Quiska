@@ -13,15 +13,20 @@ html{
 
 body{
     font-family: montserrat;
+    
 
 }
+.image2{
+    height: 150px;
+    width: 220px;}
 nav{
-    background: #A9DEF9;
+    background: #4db5ff;
     height: 80px;
     width: 100%;
     position: sticky;
     top: 0;
-
+    z-index: 100;
+    
 }
 
 label.logo{
@@ -68,15 +73,11 @@ a.test{
    
     border-style: solid;
 }
-    
-
-
-
 .box1{
     height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(bg\ \(1\).webp);
+    url(background.gif);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -106,7 +107,7 @@ a.test{
 .box2{
     height: 100px;
     width: 100%;
-    background: #A9DEF9;
+    background: linear-gradient(to bottom, #2E3192 , #1BFFFF); 
     background-size: cover;
     background-position: center;
     display: table;
@@ -129,6 +130,7 @@ h1{
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+
 }
 
 .check-btn{
@@ -165,10 +167,11 @@ h1{
         height: 100vh;
         background: #2c3e50;
         top: 80px;
-        
+        z-index: 100;
         left: -100%;
         text-align: center;
         transition: all .5s; 
+
     }
     nav ul li{
         display: block;
@@ -187,11 +190,6 @@ h1{
     }
 }
 
-
-
-
-
-
 .footer{
     padding: 30px ;
 }
@@ -200,9 +198,17 @@ footer{
     height: 50px;
 }
 
-h4{
+.footer1{
     text-align: center;
     padding: 20px;
+    background: #2c3e50;
+    color: #A9DEF9;
+    height: 340px;
+    border-radius: 5px;
+}
+h4{
+    text-align: center;
+    padding: 5px;
     background: #2c3e50;
     color: #A9DEF9;
 }
@@ -213,14 +219,21 @@ html {
 
 .quiz{
     height: 700px;
-    background: #1b9bff;
+    background: linear-gradient(to top, #2E3192 , #1BFFFF);
     font-family: cursive;
 
+}
+.contacts{
+    color: #eceff1;
+   
+    
+    padding: 20px;
+    
 }
 
 .footer{
     background: #4a637c;
-    height: 170px;
+    height: 381px;
 }
 
 
@@ -316,7 +329,6 @@ a{
 
 
 .hi{
-    background: #fffafa;
     height: 60%;
     width: 100%;
     border-style:ridge;
@@ -326,6 +338,7 @@ a{
 .hi2{
     display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 
 .hi3{
@@ -334,7 +347,7 @@ a{
     width: 250px;
     margin: auto;
     margin-top: 50px;
-    border-radius: 2px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     
    
@@ -364,6 +377,7 @@ a{
     height: 100px; /* height of container */
     overflow: hidden;
     border: 2px solid black;
+    border-radius: 10px;
     
     
 }
@@ -373,6 +387,7 @@ a{
     overflow: hidden;
     border: 2px solid black;
     padding-left: 35px;
+    border-radius: 10px;
     
     
 }
@@ -382,6 +397,7 @@ a{
     overflow: hidden;
     border: 2px solid black;
     padding-left: -35px;
+    border-radius: 10px;
     
     
     
@@ -476,6 +492,14 @@ a{
     padding-left: 10px;
 }
 
+aadd{
+    padding: 0 5%;
+    padding-top: 20%;
+}
+aadd1{
+    padding: 0 1%;
+    padding-top: 20%;
+}
 
 .fit{
     height: 100px;
@@ -540,3 +564,183 @@ a{
 .label_txt2{
     text-align: left;
 }
+
+
+
+
+
+.box1{
+    margin: 0;
+    height: 100vh;
+    font-weight: 100;
+    
+    -webkit-overflow-Y: hidden;
+    -moz-overflow-Y: hidden;
+    -o-overflow-Y: hidden;
+    overflow-y: hidden;
+    -webkit-animation: fadeIn 1 1s ease-out;
+    -moz-animation: fadeIn 1 1s ease-out;
+    -o-animation: fadeIn 1 1s ease-out;
+    animation: fadeIn 1 1s ease-out;
+}
+
+.header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    color: white;
+    font-size: 4em;
+  }
+
+
+  #head1, #head2,#head3, #head4, #head5{
+    opacity: 0;
+  }
+  
+  #head1{
+    -webkit-animation: fadeOut 1 5s ease-in;
+    -moz-animation: fadeOut 1 5s ease-in;
+    -o-animation: fadeOut 1 5s ease-in;
+    animation: fadeOut 1 5s ease-in;
+  }
+  
+  #head2{
+    -webkit-animation: fadeOut 1 5s ease-in;
+    -moz-animation: fadeOut 1 5s ease-in;
+    -o-animation: fadeOut 1 5s ease-in;
+    animation: fadeOut 1 5s ease-in;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    animation-delay: 6s;
+  }
+  
+  #head3{
+    -webkit-animation: fadeOut 1 5s ease-in;
+    -moz-animation: fadeOut 1 5s ease-in;
+    -o-animation: fadeOut 1 5s ease-in;
+    animation: fadeOut 1 5s ease-in;
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    animation-delay: 12s;
+  }
+  
+  #head4{
+    -webkit-animation: fadeOut 1 5s ease-in;
+    -moz-animation: fadeOut 1 5s ease-in;
+    -o-animation: fadeOut 1 5s ease-in;
+    animation: fadeOut 1 5s ease-in;
+    -webkit-animation-delay: 17s;
+    -moz-animation-delay: 17s;
+    -o-animation-delay: 17s;
+    animation-delay: 17s;
+  }
+  
+  #head5{
+    -webkit-animation: finalFade 1 5s ease-in;
+    -moz-animation: finalFade 1 5s ease-in;
+    -o-animation: finalFade 1 5s ease-in;
+    animation: finalFade 1 5s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 22s;
+    -moz-animation-delay: 22s;
+    -o-animation-delay: 22s;
+    animation-delay: 22s;
+  }
+  @-webkit-keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+  
+  @-moz-keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+  
+  @-o-keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+  
+  @keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeOut{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 0;}
+  }
+  
+  @-moz-keyframes fadeOut{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 0;}
+  }
+  
+  @-o-keyframes fadeOut{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 0;}
+  }
+  
+  @keyframes fadeOut{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 0;}
+  }
+  
+  @-webkit-keyframes finalFade{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 1;}
+  }
+  
+  @-moz-keyframes finalFade{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 1;}
+  }
+  
+  @-o-keyframes finalFade{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 1;}
+  }
+  
+  @keyframes finalFade{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    80%{opacity: .9;}
+    100%{opacity: 1;}
+  }
+  
+#footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    position: fixed;
+    -webkit-transform: translate(95vw,90vh);
+    -moz-transform: translate(95vw,90vh);
+    transform: translate(95vw,90vh);
+    transform: translate(95vw,90vh);
+  }
+  
+  .start{
+    padding: 20px;
+  }
