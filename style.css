@@ -159,6 +159,15 @@ h1{
     padding-right: 21px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
   }
+  .container2{
+    position: relative;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
 @media (max-width: 752px){
     label.logo{
         font-size: 30px;
@@ -171,8 +180,11 @@ h1{
 
     .d1{
         width: 70%;
+        
     }
-}
+    .container2{
+        height: 850px;
+    }}
 @media (max-width: 858px){
     
     
@@ -767,15 +779,7 @@ aadd1{
     height: 100%;
     width: 100%;
   }
-  .container2{
-    position: relative;
-    height: 650px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-    
-  }
+  
   
   
   .fa-chevron-circle-left{
