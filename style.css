@@ -50,14 +50,14 @@ nav ul li{
     line-height: 80px;
     margin: 0 5px;
 }
-nav ul li a{
+nav ul li .fcka{
     color: white;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-a.active,a:hover{
+.fcka.active,.fcka:hover{
     background: #1b9bff;
     transition: .5s;
     text-shadow: 2px 3px 0px #2c3e50;
@@ -147,17 +147,35 @@ h1{
 #check{
     display: none;
 }
-@media (max-width: 952px){
+.d1{
+    position: absolute;
+    margin-top: 69px;
+    height: 75%;
+    width: 50%;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    padding-left: 20px;
+    padding-right: 21px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  }
+@media (max-width: 752px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
-        text-shadow: 2px 2px #ff0000;
+       
     }
-    nav ul li a{
+    nav ul li .fcka{
         font-size: 16px;
+    }
+
+    .d1{
+        width: 70%;
     }
 }
 @media (max-width: 858px){
+    
+    
     .check-btn{
         display: block;
     }
@@ -177,7 +195,7 @@ h1{
         display: block;
 
     }
-    nav ul li a{
+    nav ul li .fcka{
         font-size: 20px;
     }
     a:hover,a.active{
@@ -255,7 +273,7 @@ html {
 
 
 
-a{
+.fcka{
     text-shadow: 3px 3px 3px #2c3e50;
     font-family: Helvetica;
     font-weight: bolder;
@@ -743,4 +761,27 @@ aadd1{
   
   .start{
     padding: 20px;
+  }
+
+  .quiz11{
+    height: 100%;
+    width: 100%;
+  }
+  .container2{
+    position: relative;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  
+  
+  .fa-chevron-circle-left{
+    padding-top: 10px;
+    
+  }
+  a:visited{
+    color: #000;
   }

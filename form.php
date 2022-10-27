@@ -38,7 +38,7 @@
 		
 		mysqli_close($conn);
 		?>
-	
+	echo "asdf"
 </body>
 
 </html>
