@@ -19,7 +19,7 @@
        
 		$name = $_REQUEST['name'];
 		$email = $_REQUEST['email'];
-
+		
         $message = $_REQUEST['message'];
 		
 		$sql = "INSERT INTO contact SET
