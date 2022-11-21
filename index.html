@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +71,7 @@
 
 </div>
 <div class="poscon">
-<form action="form.php" method="POST" class="contactcss">
+<form action="submit.php" method="POST" class="contactcss">
     <div class="form-group1">
         <label class="label_txt1">Name:</label>
         <input type="text" name="name" class="form-control1" placeholder="Enter Your Name" required>
@@ -83,9 +86,11 @@
     </div>
     <div class="sub">
         <label class="label_txt1"></label>
-        <button type="submit" class="glow-on-hover">Submit</button>
+        <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Submit</button>
     </div>
 </form>
+
+
 </div>
 </section>
 <!-- Parallex shit end-->
@@ -105,17 +110,34 @@
     <br>
     <hr>
     <br>
-    <h4>Made by Karan Agarwal</h4> 
+    <h4 class="under"><a href="https://karanagarwal.quantgam.com">Made by Karan Agarwal</a></h4> 
     
     <h4>Follow us on: <i class="fa-brands fa-instagram"></i></h4>
-    <br><h6 class="copy"> © Quiska.quantgam.com, Inc. All rights reserved.</h6>
+    <br><h6 class="copy"> © quiska.quantgam.com, All rights reserved 2022.</h6>
 <br>
 
 </footer>
 </div></section>
 
 <script src="javascript.js"></script>
+<script>
+	  jQuery('#frmContactus').on('submit',function(e){
+		jQuery('#msg').html('');
+		jQuery('#submit').html('Please wait');
+		jQuery('#submit').attr('disabled',true);
+		jQuery.ajax({
+			url:'submit.php',
+			type:'post',
+			data:jQuery('#frmContactus').serialize(),
+			success:function(result){
+				jQuery('#msg').html(result);
+				jQuery('#submit').html('Submit');
+				jQuery('#submit').attr('disabled',false);
+				jQuery('#frmContactus')[0].reset();
+			}
+		});
+		e.preventDefault();
+	  });
+	  </script>
 </body>
 
-
-</html>

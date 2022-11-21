@@ -787,5 +787,12 @@ aadd1{
     
   }
   a:visited{
-    color: #000;
+    color: #A9DEF9;
   }
+  a:link {
+    color: #A9DEF9;
+    
+  }
+  .under:hover {
+    text-decoration: underline;
+}
