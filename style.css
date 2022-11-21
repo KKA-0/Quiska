@@ -20,7 +20,7 @@ body{
     height: 150px;
     width: 220px;}
 nav{
-    background: #4db5ff;
+    background: #2e3192;
     height: 80px;
     width: 100%;
     position: sticky;
@@ -114,12 +114,10 @@ a.test{
     text-shadow: 4px 4px 9px #ff449b;
 }
 .box3{
-    height: 120vh;
-    width: 100%;
-    background-image: url(img2.webp);
-    background-size: cover;
-    background-position: center;
-    display: table;
+    margin: 0;
+  min-height: 600px;
+  background-color: #1978c1;
+    
     
 }
 h1{
@@ -796,3 +794,158 @@ aadd1{
   .under:hover {
     text-decoration: underline;
 }
+
+.features{
+    margin: 0;
+  padding: 0;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background:black;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+.btn-options{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+
+  .btn-options .rida{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+
+  .btn-options .rida:before,
+  .btn-options .rida:after{
+  position: absolute;
+  content: "Quiz";
+  height: 45px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #2e3192;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.btn-options .rida:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.btn-options .rida:after{
+  color: #2e3192;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.btn-options .rida:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+.btn-options-2{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+
+  .btn-options-2 .rida-2{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+
+  .btn-options-2 .rida-2:before,
+  .btn-options-2 .rida-2:after{
+  position: absolute;
+  content: "Confession";
+  height: 45px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #2e3192;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.btn-options-2 .rida-2:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.btn-options-2 .rida-2:after{
+  color: #2e3192;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.btn-options-2 .rida-2:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+
+
+
+
+
+
+
+/* waves */
+.ocean {
+    height: 80px; /* change the height of the waves here */
+    width: 100%;
+    position: absolute;
+    transform: scale(-1);
+    overflow-x: hidden;    
+    
+  }
+
+  
+.wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
+  
+  .wave:nth-of-type(2) {
+    bottom: 0;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+  }
+  
+  .wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes wave {
+      0% {transform: translateX(0);}
+      50% {transform: translateX(-25%);}
+      100% {transform: translateX(-50%);}
+  }
+  
