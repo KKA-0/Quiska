@@ -362,11 +362,103 @@ html {
     border-style:ridge;
     padding: 40px;
 }
-
+.welcome{
+  color: #000;
+  font-family: cursive;
+}
 .hi2{
     display: flex;
     flex-wrap: wrap;
     border-radius: 5px;
+}
+.confess{
+  height: 200px;
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+.textboi{
+  height: 40px;
+    align-items: center;
+    margin: 29px;
+    border-left: solid;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 20px;
+}
+.stat{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  color: whitesmoke;
+  
+}
+
+.statics{
+  height: 150px;
+  width: 150px;
+  background: orangered;
+  display: flex;
+  border-radius: 10px;
+  margin: 30px;
+  
+  
+}
+.statics:hover{
+  height: 150px;
+  width: 150px;
+  background: orangered;
+  display: flex;
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: 5px 10px #888888;
+  
+}
+.textstat{
+  display: inline-block;
+  align-self: flex-end;
+  padding: 10px;
+  
+}
+.statics1{
+  display: flex;
+  height: 150px;
+  width: 150px;
+  background: rgb(88, 0, 202);
+  border-radius: 10px;
+  margin: 30px;
+}
+.statics1:hover{
+  display: flex;
+  height: 150px;
+  width: 150px;
+  background: rgb(88, 0, 202);
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: 5px 10px #888888;
+  
+}
+
+.long-statics{
+  height: 150px;
+  width: 300px;
+  background: rgb(2, 162, 236);
+  border-radius: 10px;
+  margin: 30px;
+  display: flex;
+}
+.long-statics:hover{
+  height: 150px;
+  width: 300px;
+  background: rgb(2, 162, 236);
+  border-radius: 10px;
+  margin: 30px;
+  display: flex;
+  box-shadow: 5px 10px #888888;
 }
 
 .hi3{
@@ -803,7 +895,11 @@ aadd1{
   align-items: center;
   justify-content: center;
   background:black;
+<<<<<<< Updated upstream
    width: 100%;
+=======
+  width: 100%;
+>>>>>>> Stashed changes
 }
 
 
