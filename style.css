@@ -1046,3 +1046,15 @@ aadd1{
       100% {transform: translateX(-50%);}
   }
   
+.square1{
+  height: 150px;
+  width: 150px;
+  color: #000;
+  background-color: #000;
+}
+
+.confessions1{
+  height: 400px;
+  width: 100%;
+}
+
