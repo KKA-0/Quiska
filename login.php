@@ -1,3 +1,13 @@
+
+
+<?php
+require_once("form.php");
+$username = $email = $password = "";
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +27,7 @@
   <template class="ad__mobile">
     // Mobile ad HTML code with inline script
     <div class="login">
-      <div class="login-screen">
+      <div id="1" class="login-screen">
         <div class="app-title">
           <h1>Login</h1>
         </div>
@@ -34,11 +44,13 @@
           </div>
   
           <a class="btn btn-primary btn-large btn-block" href="#">login</a>
-          <a class="login-link" href="#">Sign up</a>
+          <a class="login-link" href="signup.php" >Sign up</a>
+          
           <a class="login-link" href="#">Lost your password?</a>
         </div>
       </div>
-    </div>
+      
+   
   </template>
   <template class="ad__desktop">
     // Desktop ad HTML code with inline script
@@ -53,10 +65,11 @@
               <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
               <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
+<!--                    signup inputs                                     -->
             <span>or use your email for registration</span>
-            <input required type="text" placeholder="Name" />
-            <input required type="email" placeholder="Email" />
-            <input required type="password" placeholder="Password" />
+            <input required type="text" name="username"placeholder="Username" />
+            <input required type="email" name="email"placeholder="Email" />
+            <input required type="password" name="Password"placeholder="Password" />
             <button>Sign Up</button>
           </form>
         </div>
@@ -99,7 +112,8 @@
       .content;
     
     ad.appendChild(document.importNode(content, true));
-  </script>
+
+      </script>
 </div> 
 
 

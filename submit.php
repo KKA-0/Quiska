@@ -39,7 +39,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
 	$mail->SMTPSecure="tls";
 	$mail->SMTPAuth=true;
 	$mail->Username="quantgamemail@gmail.com";
-	$mail->Password="#";
+	$mail->Password="wujzbgilzrlpbgsa";
 	$mail->SetFrom("quantgamemail@gmail.com");
 	$mail->addAddress("quantgamemail@gmail.com");
 	$mail->IsHTML(true);
