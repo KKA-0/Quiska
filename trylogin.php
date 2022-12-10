@@ -1,109 +1,4 @@
 
-<?php
-require_once("form.php");
-
-$username = $password = $email = $confirm_password = "";
-$username_err = $password_err = $email_err = $confirm_password_err = "";
-
-if ($_SERVER['REQUEST_METHOD'] == "POST"){
-
-    // Check if username is empty
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Username cannot be blank";
-    }
-    else{
-        $sql = "SELECT id FROM users WHERE username = ?";
-        $stmt = mysqli_prepare($con, $sql);
-        if($stmt)
-        {
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
-
-            // Set the value of param username
-            $param_username = trim($_POST['username']);
-
-            // Try to execute this statement
-            if(mysqli_stmt_execute($stmt)){
-                mysqli_stmt_store_result($stmt);
-                if(mysqli_stmt_num_rows($stmt) == 1)
-                {
-                    $username_err = "This username is already taken"; 
-                }
-                else{
-                    $username = trim($_POST['username']);
-                }
-            }
-            else{
-                echo "Something went wrong";
-            }
-        }
-    }
-
-    mysqli_stmt_close($stmt);
-
-
-// email
-if(empty(trim($_POST['email']))){
-  $email_err = "email cannot be blank";
-}
-elseif(strlen(trim($_POST['email'])) < 5){
-  $email_err = "email cannot be less than 5 characters";
-}
-else{
-  $email = trim($_POST['email']);
-}
-// Check for password
-if(empty(trim($_POST['password']))){
-    $password_err = "Password cannot be blank";
-}
-elseif(strlen(trim($_POST['password'])) < 5){
-    $password_err = "Password cannot be less than 5 characters";
-}
-else{
-    $password = trim($_POST['password']);
-}
-
-// Check for confirm password field
-if(trim($_POST['password']) !=  trim($_POST['confirm_password'])){
-    $password_err = "Passwords should match";
-}
-
-
-// If there were no errors, go ahead and insert into the database
-if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err))
-{
-    $sql = "INSERT INTO users (username, email,  password) VALUES (?, ?, ?)";
-    $stmt = mysqli_prepare($con, $sql);
-    if ($stmt)
-    {
-        mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_email, $param_password);
-
-        // Set these parameters
-        $param_username = $username;
-        $param_email = $email;
-        $param_password = password_hash($password, PASSWORD_DEFAULT);
-
-        // Try to execute the query
-        if (mysqli_stmt_execute($stmt))
-        {
-            header("location: index.html");
-        }
-        else{
-            echo "Something went wrong... cannot redirect!";
-        }
-    }
-    mysqli_stmt_close($stmt);
-}
-mysqli_close($con);
-}
-
-?>
-
-<?php
-//login verification
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,14 +35,9 @@ mysqli_close($con);
           <label class="login-field-icon fui-lock" for="login-pass"></label>
           </div>
   
-<<<<<<< Updated upstream:login.html
-          <a class="btn btn-primary btn-large btn-block" href="#">login</a>
-          <a class="login-link" href="signup.html" >Sign up</a>
-=======
           <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Submit</button>
           </form>
           <a class="login-link" href="signup.php" >Sign up</a>
->>>>>>> Stashed changes:login.php
           
           <a class="login-link" href="#">Lost your password?</a>
         </div>
@@ -170,9 +60,9 @@ mysqli_close($con);
             </div>
 <!--                    signup inputs                                     -->
             <span>or use your email for registration</span>
-            <input required type="text" name="username"placeholder="Username" />
-            <input required type="email" name="email"placeholder="Email" />
-            <input required type="password" name="password"placeholder="Password" />
+            <input required type="text" name="usernawertme"placeholder="Username" />
+            <input required type="email" name="emaiwertl"placeholder="Email" />
+            <input required type="password" name="passwowertrd"placeholder="Password" />
             <input required type="password" name="confirm_password"placeholder="confirm_password" />
             
             <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Sign Up</button>
@@ -181,7 +71,7 @@ mysqli_close($con);
           
         </div>
         <div class="form-container sign-in-container">
-        <form action="loginphp.php" method="post">
+        <form action="" method="post">
             <h1>Sign in</h1>
             <div class="social-container">
               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -192,9 +82,9 @@ mysqli_close($con);
             <input required type="text" name="username" placeholder="username" />
             <input required type="password" name="password" placeholder="Password" />
             <a href="#">Forgot your password?</a>
-            <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Login</button>
+            <button type="submit" name="submit" id="submit1" class="glow-on-hover" value="send">Login</button>
           </form>
-          
+
           <?php
 //This script will handle login
 session_start();
@@ -202,7 +92,7 @@ session_start();
 // check if the user is already logged in
 if(isset($_SESSION['username']))
 {
-    header("location: Confession.php");
+    header("location: Confession.html");
     exit;
 }
 require_once "form.php";
@@ -247,7 +137,7 @@ if(empty($err))
                             $_SESSION["loggedin"] = true;
 
                             //Redirect user to welcome page
-                            header("location: Confession.php");
+                            header("location: Confession.html");
                             
                         }
                     }
@@ -263,6 +153,7 @@ if(empty($err))
 
 ?>
 
+          
         </div>
         <div class="overlay-container">
           <div class="overlay">

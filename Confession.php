@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,18 +27,20 @@
     <li><a class="active fcka" href="#">Dashboard<i class="fas fa-home"></i></a></li>
     <li><a class="test fcka" href="#quiz">Quizs</a></li>
     
-    <li><a class="login fcka" href="index.html">Log-Out</Log-Out></i></a></li>
+    <li><a class="login fcka" href="logout.php">Log-Out</Log-Out></i></a></li>
     </ul>
    </nav>
    <section class="features">
     <span class="btn-options"><a class="rida" href="dashboard.html"></a></span>
-    <span class="btn-options-2"><a class="rida-2" href="Confession.html"></a></span>
+    <span class="btn-options-2"><a class="rida-2" href="Confession.php"></a></span>
     
   </div>
 
    </section>
+   
   <section class="confess">
-    <h1 class="welcome">Welcome (user)</h1>
+    <h1 class="welcome">Welcome <div class="under"><?php session_start();  echo $_SESSION['username'] ?></div></h1>
+    <br>
     <textarea readonly="true" class="textboi">https://quiska.qunatgam.com/username </textarea>
     
       </div>
@@ -52,6 +56,7 @@
   
 
 </div>
+
 <section class="quiz">
 <div class="box2">
     <h1 id="quiz">Quizs</h1>
@@ -87,3 +92,11 @@
   </div></section>
 </body>
 </html>
+<?php
+
+if(!isset($_SESSION['username']))
+{
+    header("location: login.php");
+    exit;
+}
+?>

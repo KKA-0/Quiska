@@ -13,6 +13,7 @@ html{
 
 body{
     font-family: montserrat;
+    background: #111;
     
 
 }
@@ -359,12 +360,13 @@ html {
 .hi{
     height: 60%;
     width: 100%;
-    border-style:ridge;
+    border-style:solid;
     padding: 40px;
 }
 .welcome{
-  color: #000;
+  color: whitesmoke;
   font-family: cursive;
+  margin: auto;
 }
 .hi2{
     display: flex;
@@ -376,7 +378,11 @@ html {
   width: 100%;
   display:flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
+
 .textboi{
   height: 40px;
     align-items: center;
@@ -385,6 +391,9 @@ html {
     border-radius: 5px;
     width: 80%;
     font-size: 20px;
+    margin: auto;
+    background: rgb(46, 41, 41);
+    color: whitesmoke;
 }
 .stat{
   height: 100%;
@@ -462,13 +471,13 @@ html {
 }
 
 .hi3{
-    background: rgb(255, 255, 255);
+    background: rgb(60 59 59);
     height: 300px;
     width: 250px;
     margin: auto;
     margin-top: 50px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     
    
 }
@@ -496,7 +505,7 @@ html {
     width: 250px; /* width of container */
     height: 100px; /* height of container */
     overflow: hidden;
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     border-radius: 10px;
     
     
@@ -505,17 +514,22 @@ html {
     width: 250px !important; /* width of container */
     height: 100px !important; /* height of container */
     overflow: hidden;
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     padding-left: 35px;
     border-radius: 10px;
-    
-    
+  }
+.under{
+  
+  color: red;
+  
 }
+
+
 .cropped4 {
     width: 250px !important; /* width of container */
     height: 100px !important; /* height of container */
     overflow: hidden;
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     padding-left: -35px;
     border-radius: 10px;
     
@@ -528,6 +542,7 @@ html {
     font-size: 35px;
     text-align: center;
     font-family: cursive;
+    color: whitesmoke;
 }
 
 
