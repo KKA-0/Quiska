@@ -142,7 +142,7 @@ mysqli_close($con);
   
 <<<<<<< Updated upstream:login.html
           <a class="btn btn-primary btn-large btn-block" href="#">login</a>
-          <a class="login-link" href="signup.html" >Sign up</a>
+          <a class="login-link" href="signup.php" >Sign up</a>
 =======
           <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Submit</button>
           </form>

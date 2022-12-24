@@ -12,6 +12,8 @@
 <div class="buttonww">
         <button class="glow-on-hover" type="button" onclick="window.location.href='index.html';">Go back to home Page</button>
       </div>
+
+	  
 </br>
 </body>
 </html>
@@ -58,4 +60,48 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
 	}
 	echo $msg;
 }
+
+$mailid = $email;
+$subject = "Thank For the Feedback!";
+$text_message = "Hello";
+$message = "<h2><i>Thank You for Contact with us.</i></h2>";
+
+try
+{
+$mail->IsSMTP();
+$mail->isHTML(true);
+$mail->SMTPDebug = 0;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = "ssl";
+$mail->Host = "smtp.gmail.com";
+$mail->Port = '465';
+$mail->AddAddress($mailid);
+$mail->Username="quantgamemail@gmail.com";
+$mail->Password="";
+$mail->addBCC('karanyobro@gmail.com');
+$mail->SetFrom('quantgamemail@gmail.com','quiska');
+$mail->AddReplyTo("quantgamemail@gmail.com","quiska");
+$mail->Subject = $subject;
+$mail->Body = $message;
+$mail->AltBody = $message;
+if($mail->Send())
+{
+echo "Thank you for register u got a notification through the mail you provide";
+}
+}
+catch(phpmailerException $ex)
+{
+$msg = "
+".$ex->errorMessage()."
+";
+}
+
+
 ?>
+
+<script>
+	setTimeout(function () {
+	window.location.href= 'https://quiska.ga'; // rediect hogaya baby
+ 
+ },5000);
+ </script>
