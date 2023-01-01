@@ -67,3 +67,10 @@ if(empty($err))
 
 ?>
 <h1> Either Username Or Password is Wrong!!!</h1>
+<h4> You will be rediected to home page in 3 secs</h4>
+<script>
+	setTimeout(function () {
+	window.location.href= 'https://quiska.ga'; // rediect hogaya baby
+ 
+ },3000);
+ </script>

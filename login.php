@@ -128,26 +128,22 @@ mysqli_close($con);
         <div class="app-title">
           <h1>Login</h1>
         </div>
-        <form action="" method="post">
+        <form action="loginphp.php" method="post">
         <div class="login-form">
           <div class="control-group">
-          <input type="text" class="login-field" value="" placeholder="Email" id="login-name">
+          <input type="text" class="login-field" value="" name="username" placeholder="username" id="login-name">
           <label class="login-field-icon fui-user" for="login-name"></label>
           </div>
   
           <div class="control-group">
-          <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+          <input type="password" class="login-field" value="" placeholder="password" name="password" id="login-pass">
           <label class="login-field-icon fui-lock" for="login-pass"></label>
           </div>
   
-<<<<<<< Updated upstream:login.html
-          <a class="btn btn-primary btn-large btn-block" href="#">login</a>
+          <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Login</button>
+
+</form>
           <a class="login-link" href="signup.php" >Sign up</a>
-=======
-          <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Submit</button>
-          </form>
-          <a class="login-link" href="signup.php" >Sign up</a>
->>>>>>> Stashed changes:login.php
           
           <a class="login-link" href="#">Lost your password?</a>
         </div>

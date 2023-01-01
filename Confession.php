@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Confession</title>
+    <title>User SayIt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="confession.css">
@@ -41,19 +41,48 @@
   <section class="confess">
     <h1 class="welcome">Welcome <div class="under"><?php session_start();  echo $_SESSION['username'] ?></div></h1>
     <br>
-    <textarea readonly="true" class="textboi">https://quiska.qunatgam.com/username </textarea>
+    <textarea readonly="true" class="textboi">http://localhost/quiska/sayit.php?user=<?php echo $_SESSION['id'] ?></textarea>
     
       </div>
   </section>
   <section class="stat">
 <div class="statics"><p class="textstat">In Last 24 Hours</p></div>
-<div class="statics1"><p class="textstat">Total</p></div>
-<div class="long-statics"><p class="textstat">In Last 7 days</p></div>
+<div class="statics1"><p class="total"><?php echo "100" ?></p><p class="textstat">Total</p></div>
+<div class="long-statics"><p class="total"><?php echo "1000000" ?></p><p class="textstat">In Last 7 days</p></div>
 </section>
 
 
 <div class="confessions1">
-  
+<?php
+
+  require 'form.php';
+$okey = $_SESSION['id'];
+$query = "SELECT * FROM confess WHERE userid='$okey' ORDER BY Created_at desc";
+$query_run = mysqli_query($con, $query);
+$check_faculty = mysqli_num_rows($query_run) > 0;
+
+if($check_faculty)
+{
+  while ($row = mysqli_fetch_assoc($query_run))
+    
+  { 
+    ?>
+    <div class="mess-box"><p class="mess-size"><?php echo $row['message'];?></p><p class="textstat"><?php  echo $row['created_at'];   ?></p></div>
+    <?php
+
+    
+    
+    
+  }
+
+}
+else{
+  echo "no records found";
+}
+
+
+
+?>
 
 </div>
 

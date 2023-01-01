@@ -365,8 +365,9 @@ html {
 }
 .welcome{
   color: whitesmoke;
-  font-family: cursive;
+  font-family: 'Chivo Mono', monospace;
   margin: auto;
+  padding: 5px;
 }
 .hi2{
     display: flex;
@@ -374,12 +375,14 @@ html {
     border-radius: 5px;
 }
 .confess{
-  height: 200px;
+  height: 500px;
   width: 100%;
   display:flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 2rem 1rem;
+  height: fit-content;
   
 }
 
@@ -428,18 +431,22 @@ html {
   
 }
 .textstat{
-  display: inline-block;
-  align-self: flex-end;
-  padding: 10px;
+  display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    padding: 5%;
+    font-weight: bolder;
   
 }
 .statics1{
   display: flex;
-  height: 150px;
-  width: 150px;
-  background: rgb(88, 0, 202);
-  border-radius: 10px;
-  margin: 30px;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 150px;
+    background: rgb(88, 0, 202);
+    border-radius: 10px;
+    margin: 30px;
+    width: fit-content;
 }
 .statics1:hover{
   display: flex;
@@ -449,6 +456,7 @@ html {
   border-radius: 10px;
   margin: 30px;
   box-shadow: 5px 10px #888888;
+  width: fit-content;
   
 }
 
@@ -459,6 +467,7 @@ html {
   border-radius: 10px;
   margin: 30px;
   display: flex;
+  width: fit-content;
 }
 .long-statics:hover{
   height: 150px;
@@ -468,6 +477,7 @@ html {
   margin: 30px;
   display: flex;
   box-shadow: 5px 10px #888888;
+  width: fit-content; 
 }
 
 .hi3{
@@ -910,11 +920,7 @@ aadd1{
   align-items: center;
   justify-content: center;
   background:black;
-<<<<<<< Updated upstream
-   width: 100%;
-=======
   width: 100%;
->>>>>>> Stashed changes
 }
 
 
@@ -1071,5 +1077,60 @@ aadd1{
 .confessions1{
   height: 400px;
   width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.box69{
+  height: 300px;
+  width: 80%;
+  background: blueviolet;
+
+}
+
+.compl{
+  height: 450px;
+  background-color: #2e3192;
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+  
+}
+.comple{
+  font-family: cursive;
+  text-align: center;
+  padding: 0% 15%;
+  justify-content: center;
+  height: fit-content;
+
+}
+.complet{
+  font-family: cursive;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.complete{
+  font-family: cursive;
+  color: rgb(233, 233, 233);
+
+  
+  justify-content: center;
+
+}
+.completed{
+  font-family: cursive;
+  color: #000;
+  
+  
+  justify-content: center;
+
+}
