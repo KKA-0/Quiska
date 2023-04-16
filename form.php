@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('kkadb', 'root', 'karan@123', 'epiz_32211115_quiska');
+$con = mysqli_connect('localhost', 'root', 'karan@123', 'epiz_32211115_quiska');
 ?>
 
 <?php
