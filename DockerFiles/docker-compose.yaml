@@ -5,7 +5,7 @@ services:
         build:
             dockerfile: app/Dockerfile
         depends_on:
-            - db
+            - db01
         volumes:
             - ../:/var/www/html/
         ports:
