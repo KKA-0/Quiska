@@ -3,7 +3,7 @@ services:
     php-apache-environment:
         container_name: php-apache
         build:
-            dockerfile: Dockerfile
+            dockerfile: app/Dockerfile
         depends_on:
             - db
         volumes:
@@ -12,10 +12,7 @@ services:
             - 80:80
     db:
         container_name: kkadb
-        image: mysql
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: karan@123
-            MYSQL_DATABASE: epiz_32211115_quiska
+        build:
+          dockerfile: mysql/Dockerfile
         ports:
             - "3306:3306"
