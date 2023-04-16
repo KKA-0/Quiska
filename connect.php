@@ -11,7 +11,7 @@ $user = 'root';
 $pass = 'karan@123';
 
 // check the MySQL connection status
-$conn = new mysqli($host, $user, $pass);
+$conn = mysqli_connect($host, $user, $pass);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
