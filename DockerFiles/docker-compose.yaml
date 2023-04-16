@@ -10,9 +10,9 @@ services:
             - ../:/var/www/html/
         ports:
             - 80:80
-    db:
+    db01:
         container_name: kkadb
         build:
-          dockerfile: mysql/Dockerfile
+            dockerfile: mysql/Dockerfile
         ports:
             - "3306:3306"

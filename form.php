@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('db', 'root', 'karan@123', 'epiz_32211115_quiska');
+$con = mysqli_connect('db01', 'root', 'karan@123', 'epiz_32211115_quiska');
 ?>
 
 <?php
