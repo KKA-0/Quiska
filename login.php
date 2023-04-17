@@ -98,12 +98,6 @@ mysqli_close($con);
 
 ?>
 
-<?php
-//login verification
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
