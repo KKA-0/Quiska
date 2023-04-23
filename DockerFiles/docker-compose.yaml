@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+    php-apache-environment:
+        container_name: php-apache
+        build:
+            dockerfile: app/Dockerfile
+        depends_on:
+            - db01
+        volumes:
+            - ../:/var/www/html/
+        ports:
+            - 80:80
+    db01:
+        container_name: kkadb
+        build:
+            dockerfile: mysql/Dockerfile
+        ports:
+            - "3306:3306"
