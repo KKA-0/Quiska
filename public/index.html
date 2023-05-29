@@ -1,0 +1,179 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9a28018dec.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" ></script>
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Q_magazine_logo.svg/2034px-Q_magazine_logo.svg.png">
+</head>
+<body>
+    <!--Nav bar start-->
+   <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="check-btn">  
+        <i class="fas fa-bars"></i>
+    </label>    
+    <label class="logo" href="asdf.com">Quiska</label>
+    <ul>
+    <li><a class="active fcka" id="home" href="#">Home <i class="fas fa-home"></i></a></li>
+    <li><a class="test fcka" id="quiz" href="#quiz321">Quizs</a></li>
+    <li><a class="test fcka" id="about" href="#about312">About</a></li>
+    <li><a class="test fcka" id="contact" href="#contact423">Contact</a></li>
+    <li><a class="login fcka" id="login" href="login.php">Login/Signup</i></a></li>
+    </ul>
+   </nav>
+    <!--Nav bar End-->
+<!-- Parallex shit start-->
+<div class="box1">
+    
+   <br>
+   <div class="start">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+   <p id='head1' class='header'>Quizs Made </p>
+   <p id='head2' class='header'>Simple</p>
+   <p id='head3' class='header'>And Fun</p>
+   <p id='head4' class='header'>Test Yourself or Others</p>
+   <p id='head5' class='header'>Welcome to Quiska</p>
+</div>
+
+      <div class="buttonww">
+        <button class="glow-on-hover" type="button" onclick="window.location.href='dashboard.html';">CREATE QUIZ</button>
+      </div>
+</div>
+    
+    
+</div>
+<section class="quiz">
+<div class="box2" id="quiz321">
+    <h1 id="quiz">Quizs</h1>
+</div>
+
+
+</section class="about">
+
+<div class="box3" id="about312">
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      
+      <br>
+      <br>
+      <div class ="compl">
+      <div class="comple"><br>
+        <h1 class="complet">About</h1>
+        <br>
+        
+        <h3 class="complete">
+            
+            It is a place for most of the teenagers, where you can create or take quiz's created by other users like you friends.
+            <br>
+            You can create a Link for SayIt Where you can recive or send Anomalous Messages.
+            <br>
+            <br>
+        </h3>
+            <h3 class="completed">
+                Tasks:
+                <br>
+            SayIt - Completed
+            <br>
+            Quiz - Uncompleted
+            <br><br>
+        </h3>
+        <br><br>
+      </div>
+      </div>
+</div>
+
+</section>
+<section class="contact" id="contact423">
+
+    <div class="box4">
+<h2 class="con" id="contact">Contact us</h2>
+
+</div>
+<div class="poscon">
+<form action="submit.php" method="POST" class="contactcss">
+    <div class="form-group1">
+        <label class="label_txt1">Name:</label>
+        <input type="text" name="name" class="form-control1" placeholder="Enter Your Name" required>
+    </div>
+    <div class="form-group1">
+        <label class="label_txt1">Email:</label>
+        <input type="email" name="email" class="form-control1" placeholder="Enter Your Email" required>
+    </div>
+    <div class="form-group1">
+        <label class="label_txt2">Message:</label>
+        <input type="text-area"  name="message"class="form-controlmsg" placeholder="Enter Your Message" required>
+    </div>
+    <div class="sub">
+        <label class="label_txt1"></label>
+        <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Submit</button>
+    </div>
+</form>
+
+
+</div>
+</section>
+<!-- Parallex shit end-->
+<section class="footer">
+<div class="footer1">
+
+<footer>
+<div class="contacts">
+    <h5 >Terms and Conditions</h5>
+    <br>
+    <h5 >Privacy Policy </h5>
+    <br>
+    <h5 ><a href="#contact423">Contact Us</a> </h5>
+
+</div>
+    
+    <br>
+    <hr>
+    <br>
+    <h4 class="under"><a href="https://karanagarwal.quantgam.com">Made by Karan Agarwal</a></h4> 
+    
+    <h4>Follow us on: <i class="fa-brands fa-instagram"></i></h4>
+    <br><h6 class="copy"> © quiska.ga, All rights reserved 2023.</h6>
+<br>
+
+</footer>
+</div></section>
+
+<script src="javascript.js"></script>
+<script>
+	  jQuery('#frmContactus').on('submit',function(e){
+		jQuery('#msg').html('');
+		jQuery('#submit').html('Please wait');
+		jQuery('#submit').attr('disabled',true);
+		jQuery.ajax({
+			url:'submit.php',
+			type:'post',
+			data:jQuery('#frmContactus').serialize(),
+			success:function(result){
+				jQuery('#msg').html(result);
+				jQuery('#submit').html('Submit');
+				jQuery('#submit').attr('disabled',false);
+				jQuery('#frmContactus')[0].reset();
+			}
+		});
+		e.preventDefault();
+	  });
+	  </script>
+</body>
+
