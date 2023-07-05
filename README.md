@@ -1,2 +1,3 @@
 # Quiska
-Quiska is a solo project done by me, I have done Full Stack Using HTML, CSS , JAVASCRIPT, PHP and MYSQL Fully from scratch and deployed on the hosting and connected to domain. Quiska is a Website where you can login and signup and can receive anonymous Messages on a generated URL for each user.
+
+![logo](https://github.com/KKA-0/Quiska/assets/85556603/2aef8fd2-6ef2-4044-80e1-5c4e7829238c)
