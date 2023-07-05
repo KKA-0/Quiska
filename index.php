@@ -1,3 +1,8 @@
+<?php
+    $join = 1;
+    $path_home = "/quiska/index.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +15,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./static/images/logo.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
 <body>
