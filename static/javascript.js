@@ -32,5 +32,5 @@ function signupContainer(){
 }
 
 function home(){
-	window.location.href = '/quiska/index.php';
+	window.location.href = '../index.php';
 }

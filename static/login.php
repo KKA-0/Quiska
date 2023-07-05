@@ -1,6 +1,6 @@
 <?php
     $join = 0;
-    $path_home = "/quiska/index.php";
+    $path_home = "../index.php";
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="signup-image" style="margin: auto;">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmQIdGpq0TS_6tuHMlDIwHQn0iTuv76x16WT6IzwaGYQlsJybBF6kyL7Y7bLTi-DWmriXDiFBAepfJLVx6fmmZp9IcDxROrMJNwl_YfoA6qdi-uPijkH4-WgI3rQeeUGrSZE59UjyTsHWNkHGLMdJLhL-9JkWjii0aBoCcukJ6IU4CYTLKPq6ag6bByB0/s320/signup.png" alt="">
+            <img class="image-svg" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmQIdGpq0TS_6tuHMlDIwHQn0iTuv76x16WT6IzwaGYQlsJybBF6kyL7Y7bLTi-DWmriXDiFBAepfJLVx6fmmZp9IcDxROrMJNwl_YfoA6qdi-uPijkH4-WgI3rQeeUGrSZE59UjyTsHWNkHGLMdJLhL-9JkWjii0aBoCcukJ6IU4CYTLKPq6ag6bByB0/s320/signup.png" alt="">
             <a onclick="signinContainer()"><h3 class="signin-option">Already a member? <i class="underline">Sign in</i></h3></a>
         </div>
         <div class="signin-fields">
@@ -102,7 +102,7 @@
             </div>
         </div>
         <div class="signin-image" style="margin: auto;">
-            <img style="height: 226px; width: 320px" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGAHv3s06X37qQUTeJtZPVHB68J_XLh-3Aec2E6_uScu2u-xQiWPX7PsVlsnA2Vh4Dz4XDu2gc74nV-t8-5xSaSxrLnIutml-dwdYQulNWClh-Q_HpXsOqkm5s4mpmpqm1XngSX-296Fibvdv6Tn6t5b_ihDDVvBDJCvGGE-tXNOKjeFn2TE1Fnu6AaWk/s1104/signin.png" alt="">
+            <img class="signin-image-png" style="height: 226px; width: 320px" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGAHv3s06X37qQUTeJtZPVHB68J_XLh-3Aec2E6_uScu2u-xQiWPX7PsVlsnA2Vh4Dz4XDu2gc74nV-t8-5xSaSxrLnIutml-dwdYQulNWClh-Q_HpXsOqkm5s4mpmpqm1XngSX-296Fibvdv6Tn6t5b_ihDDVvBDJCvGGE-tXNOKjeFn2TE1Fnu6AaWk/s1104/signin.png" alt="">
             <a onclick="signupContainer()"><h3 class="signin-option">Not a member? <i class="underline">Sign up</i></h3></a>
         </div>
     </div>

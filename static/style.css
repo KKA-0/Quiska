@@ -141,57 +141,212 @@ h1{
     
     
   }
-@media (max-width: 752px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-       
-    }
-    nav ul li .fcka{
-        font-size: 16px;
-    }
+  
+.image-svg{
+    display: initial;
+  }
 
-    .d1{
-        width: 70%;
-        
-    }
-    .container2{
-        height: 850px;
-    }}
-@media (max-width: 858px){
-    
-    
-    .check-btn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 80px;
-        z-index: 100;
-        left: -100%;
-        text-align: center;
-        transition: all .5s; 
-
-    }
-    nav ul li{
-        display: block;
-
-    }
-    nav ul li .fcka{
-        font-size: 20px;
-    }
-    a:hover,a.active{
-        background: none;
-        color: #0082e6;
-    }
-    #check:checked ~ ul{
-        left: 0;
-        
-    }
+.signup-container{
+  display: flex;
+  flex-wrap: wrap;
+  height: 440px;
+  width: 65%;
+  margin: 50px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.signup-fields{
+  height: 100%;
+  width: 48%;
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+.signin-fields{
+  height: 100%;
+  width: 48%;
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+.signup-text, .signin-text{
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: #1b1a1a;
+  padding: 30px;
+  margin-left: 50px;
+}
+
+
+.group{
+  position:relative; 
+  margin-bottom:15px;
+  margin-left: 80px;
+  font-family: 'Belanosima', sans-serif;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:70%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:13px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:7px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-8px;
+  font-size:14px;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:1px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  to 	{ width:0; background:transparent; }
+}
+
+.fa-envelope, .fa-user, .fa-lock{
+  padding-right: 10px;
+}
+
+.terms-of-service-checkbox{
+  display: inline;
+  width: 25px;
+}
+.terms-of-service{
+  padding-left: 80px;
+  font-size: 10px;
+  font-family: 'Belanosima', sans-serif;
+}
+
+.submit-div {
+  width: 150px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.submit {
+ padding: 10px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 7px 7px 5px -5px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.submit::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+.submit:hover {
+ color: #e8e8e8;
+}
+
+.submit:hover::before {
+ width: 100%;
+}
+
+#alert{
+  position: fixed;
+  height: fit-content;
+  width: fit-content;
+  left: 50%;
+  background-color: rgb(255, 131, 131);
+  color: white;
+  padding: 16px 20px;
+  bottom: 75%;
+  z-index: 191;
+  overflow: hidden;
+}
+
+.alert-close{
+  display: inline;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 2px;
+}
+
+.signin-option{
+  font-family: 'Belanosima', sans-serif;
+  padding: 30px;
+  cursor: pointer;
+}
+.underline{
+  text-decoration: underline;
+}
+.signup-fields{
+  display: none;
+}
+.signup-image{
+  display: none;
+}
+
+
 
 .footer{
     padding: 30px ;
@@ -1258,6 +1413,7 @@ aadd1{
   background: #f1f1f3;
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
   position: relative;
+  
 }
 
 .card > * + * {
@@ -1570,7 +1726,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 
 .signin-option{
   font-family: 'Belanosima', sans-serif;
-  padding: 50px;
+  padding: 30px;
   cursor: pointer;
 }
 .underline{
@@ -1581,4 +1737,85 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 }
 .signup-image{
   display: none;
+}
+.signup-image{
+  display: none;
+}
+@media (max-width: 1015px){
+  .image-svg{
+    display: none;
+  }
+  .signin-image-png{
+    display: none;
+  }
+  .signin-option{
+    padding: 15px;
+  }
+}
+@media (max-width: 752px){
+  #alert{
+    left: 40%;
+    bottom: 75%;
+    z-index: 99;
+  }
+  .card{
+    margin: 15px auto;
+    width: 85%;
+  }
+  .image-svg{
+    display: none;
+  }
+  .signup-container{
+    width: 90%;
+    height: fit-content;
+  }
+  label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+     
+  }
+  nav ul li .fcka{
+      font-size: 16px;
+  }
+
+  .d1{
+      width: 70%;
+      
+  }
+  .container2{
+      height: 850px;
+  }}
+@media (max-width: 858px){
+  
+  
+  .check-btn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      z-index: 100;
+      left: -100%;
+      text-align: center;
+      transition: all .5s; 
+
+  }
+  nav ul li{
+      display: block;
+
+  }
+  nav ul li .fcka{
+      font-size: 20px;
+  }
+  a:hover,a.active{
+      background: none;
+      color: #0082e6;
+  }
+  #check:checked ~ ul{
+      left: 0;
+      
+  }
 }
