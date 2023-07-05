@@ -13,7 +13,7 @@ html{
 
 body{
     font-family: montserrat;
-    background: #111;
+    background: whitesmoke;
     
 
 }
@@ -89,11 +89,10 @@ a.login{
 .box2{
     height: 100px;
     width: 100%;
-    background: linear-gradient(to bottom, #2E3192 , #1BFFFF); 
+    background: #183153; 
     background-size: cover;
     background-position: center;
     display: table;
-    text-shadow: 4px 4px 9px #ff449b;
 }
 .box3{
     margin: 0;
@@ -242,10 +241,14 @@ html {
 }
 
 .footer{
-    background: #4a637c;
-    height: 381px;
+    background: #181818;
+    height: 250px;
 }
 
+.container-socials{
+  display: flex;
+  flex: wrap;
+}
 
 .contact{
     height: 625px;
@@ -1120,7 +1123,7 @@ aadd1{
 
 
 .cssbuttons-io-button {
-  background: #A370F0;
+  background: #183153;
   color: white;
   font-family: inherit;
   padding: 0.35em;
@@ -1149,7 +1152,7 @@ aadd1{
   height: 2.2em;
   width: 2.2em;
   border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #183153;
   right: 0.3em;
   transition: all 0.3s;
 }
@@ -1187,13 +1190,14 @@ aadd1{
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border: none;
+  cursor: pointer;
  }
  
  .signup-login-button:after {
   content: " ";
   width: 0%;
   height: 100%;
-  background: #FFD401;
+  background: #7257fa;
   position: absolute;
   transition: all 0.4s ease-in-out;
   right: 0;
@@ -1321,4 +1325,182 @@ aadd1{
 
 .card{
   margin: 20px;
+}
+
+.form {
+  background-color: #ffffff;
+  display: block;
+  padding: 1rem;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 25px;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input, .form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #4F46E5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.credits{
+  color: white;
+}
+
+.credits-name{
+  color: white;
+  padding: 0 auto;
+}
+
+.signup-container{
+  display: flex;
+  flex-wrap: wrap;
+  height: 440px;
+  width: 65%;
+  margin: 50px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.signup-fields{
+  height: 100%;
+  width: 50%;
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+
+.signup-text{
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: #1b1a1a;
+  padding: 30px;
+  margin-left: 50px;
+}
+
+
+.group{
+  position:relative; 
+  margin-bottom:15px;
+  margin-left: 80px;
+  font-family: 'Belanosima', sans-serif;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:70%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:13px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-8px;
+  font-size:14px;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:1px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  to 	{ width:0; background:transparent; }
+}
+
+.fa-envelope, .fa-user, .fa-lock{
+  padding-right: 10px;
+}
+
+.terms-of-service-checkbox{
+  display: inline;
+  width: 25px;
+}
+.terms-of-service{
+  padding-left: 80px;
+  font-size: 10px;
+  font-family: 'Belanosima', sans-serif;
 }
