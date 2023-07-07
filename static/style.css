@@ -1,8 +1,7 @@
+
 html{
     scroll-behavior: smooth;
 }
-
-
 *{
     padding: 0;
     margin: 0;
@@ -185,15 +184,6 @@ h1{
   margin-left: 80px;
   font-family: 'Belanosima', sans-serif;
 }
-input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:70%;
-  border:none;
-  border-bottom:1px solid #757575;
-}
-input:focus 		{ outline:none; }
 
 /* LABEL ======================================= */
 label 				 {
@@ -391,12 +381,12 @@ html {
 
 .footer{
     background: #181818;
-    height: 250px;
+    height: 150px;
 }
 
 .container-socials{
   display: flex;
-  flex: wrap;
+  justify-content: center;
 }
 
 .contact{
@@ -869,7 +859,7 @@ aadd1{
     transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: 4em;
   }
 
@@ -1497,14 +1487,11 @@ aadd1{
   color: #000;
 }
 
-.input-container {
-  position: relative;
-}
 
 .input-container input, .form button {
   outline: none;
   border: 1px solid #e5e7eb;
-  margin: 8px 0;
+  margin: 8px auto;
 }
 
 .input-container input {
@@ -1540,8 +1527,10 @@ aadd1{
 }
 
 .credits-name{
+  font-size: 15px;
   color: white;
-  padding: 0 auto;
+  padding: 0 auto; 
+  font-family: 'Belanosima', sans-serif;
 }
 
 .signup-container{
@@ -1578,7 +1567,7 @@ aadd1{
   margin-left: 80px;
   font-family: 'Belanosima', sans-serif;
 }
-input 				{
+input{
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
@@ -1818,4 +1807,90 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
       left: 0;
       
   }
+}
+
+.container-dashboard {
+  height: 700px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.container-stats {
+  height: 200px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: white;
+  margin: 30px auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container-recent-events{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.container-recent_quiz{
+  position: relative;
+  height: 400px;
+  width: 45%;
+  min-width: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 5px 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container-recent_sayit{
+  position: relative;
+  height: 400px;
+  width: 45%;
+  min-width: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.next-quiz {
+  position: relative;
+  top: calc(100% - 50px);
+  left: calc(100% - 50px);
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  padding: 18px 0px;
+}
+
+.next-sayit {
+  position: relative;
+  top: calc(100% - 50px);
+  left: calc(100% - 50px);
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  padding: 18px 0px;
+}
+.textarea-container{
+  margin: 0 10px;
+}
+textarea{
+  height: 150px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 18px;
+  outline: 0.1px solid rgb(235, 235, 235);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 18px
+}
+.form-sayit-wel{
+  height: 40px;
+}
+.center-div{
+  margin: auto;
+  margin: 100px auto;
+}
+.bg-body{
+  background: rgb(114,87,250);
+  background: linear-gradient(356deg, rgba(114,87,250,1) 35%, rgba(24,49,83,1) 100%);
 }

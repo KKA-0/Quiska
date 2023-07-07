@@ -7,9 +7,9 @@
         <span id="logo" onclick="home()">Quiska</span>
     <ul>
         <li><a class="active fcka" id="home" href="<?php echo $path_home ?>">Home <i class="fas fa-home"></i></a></li>
-        <li><a class="test fcka" id="quiz" href="#quiz321">Quizs</a></li>
-        <li><a class="test fcka" id="about" href="#about312">About</a></li>
-        <li><a class="test fcka" id="contact" href="#contact423">Contact</a></li>
+        <li><a class="test fcka" id="quiz" href="<?php echo $path_sayit ?>">SayIt</a></li>
+        <li><a class="test fcka" id="about" href="<?php echo $path_quiz ?>">Quiz</a></li>
+        <li><a class="test fcka" id="contact" href="<?php echo $path_contact ?>">Contact</a></li>
         <li>
         <?php 
             if ($join == 0) {
