@@ -148,7 +148,7 @@ h1{
 .signup-container{
   display: flex;
   flex-wrap: wrap;
-  height: 440px;
+  height: 500px;
   width: 65%;
   margin: 50px auto;
   background: white;
@@ -1536,7 +1536,6 @@ aadd1{
 .signup-container{
   display: flex;
   flex-wrap: wrap;
-  height: 440px;
   width: 65%;
   margin: 50px auto;
   background: white;
@@ -1742,6 +1741,9 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   }
 }
 @media (max-width: 752px){
+  .form {
+    margin: 25px auto;
+  }
   #alert{
     left: 40%;
     bottom: 75%;
@@ -1756,7 +1758,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   }
   .signup-container{
     width: 90%;
-    height: fit-content;
   }
   label.logo{
       font-size: 30px;

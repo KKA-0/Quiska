@@ -1,8 +1,9 @@
 <?php
     $join = 1;
     $path_home = "/quiska/index.php";
-?>
 
+    include_once('./config/config.php')
+?>
 <!DOCTYPE html>
 <html>
 

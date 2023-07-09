@@ -34,3 +34,15 @@ function signupContainer(){
 function home(){
 	window.location.href = '../index.php';
 }
+
+function preventDefault() {
+	console.log('preventDefault')
+	$("button").on("submit", function(event) {
+		event.preventDefault();
+	  });
+}
+
+if(window.history.replaceState)
+{
+	window.history.replaceState(null, null, window.location.href);
+}

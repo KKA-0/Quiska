@@ -4,6 +4,8 @@
     $path_quiz = "./quiz.php";
     $path_contact = "./contact.php";
     $join = 0;
+
+    include_once('./../config/config.php')
 ?>
 
 <!DOCTYPE html>
