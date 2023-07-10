@@ -1,8 +1,12 @@
 <?php
     $join = 1;
     $path_home = "/quiska/index.php";
-
-    include_once('./config/config.php')
+    session_start();
+    include_once('./config/config.php');
+    $id = @$_SESSION['id'];
+    if(isset($id)){
+        $join = 0;
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,12 +15,12 @@
     <meta charset="utf-8">
     <title>Quiska</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./user/style.css">
     <script src="https://kit.fontawesome.com/9a28018dec.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./static/images/logo.ico">
+    <link rel="icon" type="image/x-icon" href="./user/images/logo.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
@@ -37,7 +41,7 @@
             <p id='head5' class='header'>Welcome to Quiska</p>
         </div>
 
-        <div class="buttonww"><a href="./static/dashboard.php">
+        <div class="buttonww"><a href="./user/dashboard.php">
             <button class="cssbuttons-io-button"> Get started
                 <div class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>

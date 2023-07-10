@@ -1,8 +1,15 @@
 <?php
-    $join = 0;
     $path_home = "../index.php";
-
-    include_once('./../config/config.php')
+    session_start();
+    include_once('./../config/config.php');
+    $join = 1;
+// check if the user is already logged in
+    if(isset($_SESSION['id']))
+    {
+        echo "You are already logged in";
+        header("location: ./dashboard.php");
+        exit;
+    }
 ?>
 <?php 
     $name = $username = $password = $email = $confirm_password = "";
@@ -75,7 +82,7 @@
             if ($stmt){
                 $param_name = trim($_POST['name']);
                 $param_password = trim($_POST['password']);
-                $param_password = password_hash($password, PASSWORD_DEFAULT);
+                $param_password = password_hash($param_password, PASSWORD_DEFAULT);
                 mysqli_stmt_bind_param($stmt, "ssss",$param_name, $param_username, $param_email, $param_password);
                 if(mysqli_stmt_execute($stmt)){
                     echo "Awesome! Your email has been registered";
@@ -174,7 +181,7 @@
             <div class="signin-text">
                 <span>Sign in</span>
             </div>
-            <form action="./log.php" method="POST">
+            <form action="./../backend/login.php" method="POST">
             <div class="signin_name-div">
                 <div class="group">      
                     <input type="text" name="email_login">

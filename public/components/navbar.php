@@ -13,10 +13,16 @@
         <li>
         <?php 
             if ($join == 0) {
-            } else {
-                echo '<button onclick="window.location=\'./static/login.php\'" class="signup-login-button">
+                echo '<button onclick="window.location=\'./backend/logout.php\'" class="signup-login-button">
+                        <span>Log out</span>
+                      </button>';
+            } else if ($join == 1){
+                echo '<button onclick="window.location=\'./user/login.php\'" class="signup-login-button">
                         <span>Join</span>
                       </button>';
+            }
+            else{
+                
             }
         ?>
 

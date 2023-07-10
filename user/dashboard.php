@@ -4,7 +4,14 @@
     $path_quiz = "./quiz.php";
     $path_contact = "./contact.php";
     $join = 0;
-
+    session_start();
+    // check if the user is already logged in
+    if(!isset($_SESSION['id']))
+    {
+        echo "You are already logged in";
+        header("location: ./login.php");
+        exit;
+    }
     include_once('./../config/config.php')
 ?>
 
