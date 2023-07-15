@@ -15,17 +15,16 @@ $err = "";
 
 // listening to POST request
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    echo "post request send... \n";
     // check if  Email and password are not empty
+    $email_login = trim($_POST['email_login']);
+    $password_login = trim($_POST['password_login']);
+    // echo "$email_login, $password_login";
     if(empty(trim($_POST['email_login'])) || empty(trim($_POST['password_login'])))
     {
         $err = "Please enter username + password";
     }
-    else {
-        $email_login = trim($_POST['email_login']);
-        $password_login = trim($_POST['password_login']);
-        echo "not empty feilds..";
-    }
+    else{
+        // echo "not empty feilds..";
 
     if(empty($err)) {
         $sql = "SELECT id, email, password FROM users WHERE email = ?";
@@ -35,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         // Try to execute this statement
         if(mysqli_stmt_execute($stmt)) {
-            echo "executing stmt... \n";
+            // echo "executing stmt... \n";
             mysqli_stmt_store_result($stmt);
             if(mysqli_stmt_num_rows($stmt) == 1) {
                 echo "email found... \n";
@@ -57,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 }
             }
             else{
-                echo "error: something went wrong 1";
+                echo "errorUser";
             }
         }
         else{
@@ -65,4 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
+
+}
+
 ?>

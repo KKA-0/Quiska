@@ -3,13 +3,14 @@
     $path_sayit = "./sayit.php";
     $path_quiz = "./quiz.php";
     $path_contact = "./contact.php";
+    $logout = "./../backend/logout.php";
     $join = 0;
     session_start();
     // check if the user is already logged in
     if(!isset($_SESSION['id']))
     {
         echo "You are already logged in";
-        header("location: ./login.php");
+        header("location: ./join.php");
         exit;
     }
     include_once('./../config/config.php')

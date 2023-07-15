@@ -1,6 +1,7 @@
 <?php
     $join = 1;
     $path_home = "/quiska/index.php";
+    $logout = "./backend/logout.php";
     session_start();
     include_once('./config/config.php');
     $id = @$_SESSION['id'];
@@ -22,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./user/images/logo.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    
 </head>
 
 <body>
@@ -31,14 +34,18 @@
     ?>
     <!--Nav bar End-->
     <div class="box1 bg-body">
-
+    <figure class="td-figure">
+        <img style="position: relative;
+    height: 100%;
+    z-index: 1;" src="./user/images/bg1.png" alt="quiz bg">
+    </figure>
         <br>
         <div class="start">
             <p id='head1' class='header'>Quizs Made </p>
             <p id='head2' class='header'>Simple</p>
             <p id='head3' class='header'>And Fun</p>
-            <p id='head4' class='header'>Test Yourself or Others</p>
-            <p id='head5' class='header'>Welcome to Quiska</p>
+            <p id='head4' class='header'>Test Yourself <br> or Others</p>
+            <p id='head5' class='header'>Welcome to <br> Quiska</p>
         </div>
 
         <div class="buttonww"><a href="./user/dashboard.php">
@@ -57,14 +64,14 @@
             <h1 id="quiz">SayIt</h1>
         </div>
             <div class="cardsforsayit">
-                <form class="form" action="">
+                <form class="pub_form" action="">
                     <div class="input-container">
-                      <input type="text" name="name" placeholder="Name">
+                      <input type="text" class="pub_input" name="name" placeholder="Name">
                       <span>
                       </span>
                   </div>
                   <div class="input-container">
-                      <input type="text" name="message" placeholder="Message">
+                      <input type="text" class="pub_input" name="message" placeholder="Message">
                     </div>
                      <button type="submit" class="submit">
                     Submit
@@ -96,9 +103,12 @@
                 </div>
             </div>
     </section>
+    <section>
+        
+    </section>
     <?php
         require_once './public/components/footer.php';
     ?>
 
-    <script src="javascript.js"></script>
+    <script src="./user/javascript.js"></script>
 </body>
