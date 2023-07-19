@@ -75,7 +75,8 @@ function preventDefault(data) {
 				$("#alert_text").text('User not Found')
 			});
 		}
-	}else if(data == "signup"){
+	}
+	else if(data == "signup"){
 		console.log("post for signup...")
 		fname = $('#name').val()
 		username = $('#username').val()
@@ -126,6 +127,9 @@ function preventDefault(data) {
 			});
 		}
 	}
+	else if(data == "pubForm"){
+		console.log("pubForm")
+	}
 }
 
 if(window.history.replaceState)
@@ -135,7 +139,7 @@ if(window.history.replaceState)
 
 function preference()
 {	
-	console.log("preference..")
+	console.log("preference..");
 	if ($('#preference').prop('checked')) {
 		$('#navbar').css('background', '#0c0c0c');
 		$('#navbar').css('color', 'white')

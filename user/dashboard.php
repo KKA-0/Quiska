@@ -9,7 +9,7 @@
     // check if the user is already logged in
     if(!isset($_SESSION['id']))
     {
-        echo "You are already logged in";
+        echo "You are not logged in";
         header("location: ./join.php");
         exit;
     }
@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./../public/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -33,10 +33,40 @@
 <?php
     require_once './../public/components/navbar.php';
 ?>
-<div class="container-dashboard">
-    <div class="container-stats">
-
+    <div id="greetuser">
+        <h2>Good Morning, <?php echo $_SESSION["name"]; ?>!</h2>
     </div>
+<div class="container-dashboard">
+    <center>
+        <div class="container-stats">
+            <div id="dotSVG_div">
+            <svg id="dotSVG" enable-background="new 0 0 24 24" id="Layer_1" version="1.0" width="30" height="30" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="5" r="2" />
+                <circle cx="12" cy="19" r="2" />
+            </svg>
+            </div>
+        </div>
+        <div class="container-stats">
+            <div id="dotSVG_div">
+                <svg id="dotSVG" enable-background="new 0 0 24 24" id="Layer_1" version="1.0" width="30" height="30" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="5" r="2" />
+                    <circle cx="12" cy="19" r="2" />
+                </svg>
+            </div>
+        </div>
+        <div class="container-stats">
+        <div id="dotSVG_div">
+            <svg id="dotSVG" enable-background="new 0 0 24 24" id="Layer_1" version="1.0" width="30" height="30" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="5" r="2" />
+                <circle cx="12" cy="19" r="2" />
+            </svg>
+            </div>
+        </div>
+    </center>
+</div>
         <div class="container-recent-events">
             <div class="container-recent_quiz">
                 <div class="next-quiz">
@@ -58,5 +88,5 @@
 <?php
     require_once './../public/components/footer.php';
 ?>
-<script type="text/javascript" src="./javascript.js" href="./javascript.js"></script>
+<script type="text/javascript" src="./../public/javascript.js"></script>
 </html>
