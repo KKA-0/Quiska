@@ -14,6 +14,9 @@
       background: whitesmoke;
 
   }
+  .pointer{
+    cursor: pointer;
+  }
   .image2{
       height: 150px;
       width: 220px;}
@@ -1777,6 +1780,47 @@
     margin: 5px;
     user-select: none;
   }
+  .container-sayit_link{
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    height: 200px;
+    width: 75%;
+    min-width: 350px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+  }
+  #heading_sayit_container{
+    position: relative;
+    z-index: 5;
+    top: 110px;
+    right: 25%;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  #sayit_link_div{
+    display: flex;
+    position: relative;
+    z-index: 4;
+    bottom: 250%;
+    height: 60px;
+    width: 50%;
+    background: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
+    align-items: center;
+}
+#sayit_link{
+  height: 25px;
+  width: 80%;
+  margin: 20px;
+  border-radius: 40px;
+  padding: 5px;
+  border: none;
+}
   .container-recent-events{
     display: flex;
     flex-wrap: wrap;
@@ -1938,6 +1982,9 @@
   }
 
   @media (max-width: 858px){
+    #sayit_link_div{
+      width: 90%;
+    }
     #greetuser{
       font-size: 15px;
       font-weight: 600;

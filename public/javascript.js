@@ -129,6 +129,30 @@ function preventDefault(data) {
 	}
 	else if(data == "pubForm"){
 		console.log("pubForm")
+		var pubName = $('#pubName').val()
+		var pubMess = $("#pub-textarea").val()
+		if(pubMess == ""){
+			$("#alert").css('display','initial')
+			$("#alert_text").text("Type a Message!")
+		}
+		else{
+			if(pubName == ""){
+				pubName = "Anomalous";
+			}
+			console.log("Public form ready to be send...");
+			request = $.ajax({
+				url: './backend/pubform.php',
+				type: 'post',
+				data: `name=${pubName}&mess=${pubMess}`
+			});
+			request.done(function(data){
+				console.log("Request Success", data);
+				$('#alert').css('display','initial');
+				$('#alert_text').text('Awesome! Your Comment Added!')
+				$('#pubName').val("")
+				$("#pub-textarea").val("")
+			})
+		}
 	}
 }
 
@@ -171,6 +195,11 @@ function navbarForMobile(){
 	}
   }
 
+  function sayitLinkCopy(){
+	$("#alert").css('display','initial')
+	$("#alert_text").text("Link Copied to ClipBoard")
+	navigator.clipboard.writeText($("#sayit_link").val());
+  }
 
 
 // setTimeout(function() {

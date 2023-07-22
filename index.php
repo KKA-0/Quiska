@@ -66,14 +66,13 @@
             <div class="cardsforsayit">
                 <form class="pub_form" action="">
                     <div class="input-container">
-                      <input type="text" class="pub_input" name="name" placeholder="Name (Optional)">
+                      <input type="text" class="pub_input" id="pubName" name="pubName" placeholder="Name (Optional)">
                       <span>
                       </span>
                   </div>
                   <div class="input-container">
-                      <textarea id="pub-textarea" type="text" class="pub_input" name="message" placeholder="Message"></textarea>
+                      <textarea id="pub-textarea" type="text" class="pub_input" name="pubMess" placeholder="Message"></textarea>
                     </div>
-                    <h6 id="warning" style="color: red;"></h6>
                     <h6 id="warning">Slug, Rasict or harmfull Message are prohabited</h6>
                      <button type="submit" onclick="preventDefault('pubForm')" class="submit">
                     Submit
@@ -133,6 +132,7 @@
         
     </section>
     <?php
+        require_once './public/components/alerts.php';
         require_once './public/components/footer.php';
     ?>
 
