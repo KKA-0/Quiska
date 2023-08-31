@@ -60,12 +60,19 @@ function preventDefault(data) {
 			request.done(function (data){
 				console.log("Hooray, it worked!", data);
 				if(data == "errorUser"){
+					console.warn(data);	
 					$("#alert").css('display','initial')
 					$("#alert_text").text("Error: User not Found, please check email or password")
 				}
-				else{
+				else if(data == "google"){
 					$("#alert").css('display','initial')
-					$("#alert_text").text("Successfully, Welcome Back")
+					$("#alert_text").text("Incorrect Password")
+					// setTimeout(() => { document.location.reload(); }, 2000);
+				}
+				else{
+					console.warn(data);	
+					$("#alert").css('display','initial')
+					$("#alert_text").text("Success, Welcome Back")
 					setTimeout(() => { document.location.reload(); }, 2000);
 				}
 			});
@@ -153,6 +160,10 @@ function preventDefault(data) {
 				$("#pub-textarea").val("")
 			})
 		}
+	}
+	else{
+		$("#alert").css('display','initial')
+		$("#alert_text").text("Unknown Request!")
 	}
 }
 

@@ -37,22 +37,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             // echo "executing stmt... \n";
             mysqli_stmt_store_result($stmt);
             if(mysqli_stmt_num_rows($stmt) == 1) {
-                echo "email found... \n";
+                // echo "email found... \n";
                 mysqli_stmt_bind_result($stmt, $id, $email, $name, $hashed_password);
                 mysqli_stmt_fetch($stmt);
                 if(password_verify($password_login, $hashed_password))
                 {
                     // this means the password is correct. Allow user to login
+                    echo "success";
                     session_start();
                     $_SESSION["email"] = $email_login;
                     $_SESSION["name"] = $name;
                     $_SESSION["id"] = $id;
                     $_SESSION["loggedin"] = true;
-                    echo "User logged in";
                     //Redirect user to welcome page
                     header("location: ./../user/dashboard.php");
                 }else{
-                    echo "Password is incorrect";
+                    echo "google";
                 }
             }
             else{
