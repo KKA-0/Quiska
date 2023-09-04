@@ -1,5 +1,7 @@
 {
     "require": {
-        "google/apiclient": "^2.01"
+        "google/apiclient": "^2.15.0",
+        "php": "7.4.8"
     }
+    
 }
