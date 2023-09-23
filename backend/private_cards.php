@@ -1,5 +1,5 @@
 <?php
-include_once('./../config/config.php');
+// include_once('./../config/config.php');
 $query = "SELECT id, userid, message, created_at FROM `sayit` WHERE userid = ? ORDER by id DESC limit 3;";
     $stmt = mysqli_prepare($con, $query);
     mysqli_stmt_bind_param($stmt, "s", $idFromSESSION);

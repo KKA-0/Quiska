@@ -14,6 +14,9 @@
       background: whitesmoke;
 
   }
+  .createQuizbody{
+    overflow-y: hidden;
+  }
   .pointer{
     cursor: pointer;
   }
@@ -56,6 +59,71 @@
       background: #FF99C8;
       border-style: solid;
 
+  }
+  .createQuizSidebar{
+    width: 360px;
+    height: 450px;
+    background-color: transparent;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    top: -55px;
+    margin: 22px;
+    padding: 10px;
+    
+    
+  }
+  .createQuizSidebar input::placeholder{
+    font-size: 18px;
+    text-align: center;
+  }
+  .createQuizSidebar input{
+    font-size: 16px;
+    color: #000000d1;
+    border: 0;
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  .quizPreview{
+    border-radius: 10px;
+    height: 450px;
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 200px;
+  }
+  .quizTitlePreview{
+    border-radius: 10px;
+    background-color: #0082e6;
+    width: 100%;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+  }
+  .option{
+    height: 50px;
+    width: 90%;
+    background-color: #0082e6;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .option{
+    height: 50px;
+    width: 90%;
+    background-color: #0082e6;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
   }
   .box1{
       height: 80vh;
@@ -156,7 +224,20 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-
+  .add-quiz{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10%;
+    top: 100px;
+    cursor: pointer;
+    transition: .1s;
+  }
+  .add-quiz:hover{
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 47px;
+    height: 47px;
+  }
   .signup-fields{
     height: 100%;
     width: 48%;
@@ -247,6 +328,7 @@
   box-shadow: 7px 7px 5px -5px rgba(0,0,0,0.27);
   transition: all 250ms;
   overflow: hidden;
+  
   }
 
   .submit::before {
@@ -817,7 +899,88 @@
       padding-bottom: 90px;
       
   }
+  .createQuizDiv{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center
 
+  }
+  .quizOptionsSettings{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    z-index: 16;
+  }
+  .tutorial{
+    border-radius: 20px;
+    width: 90%;
+  }
+  .close-tutorial{
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    right: 0;
+    top: 0;
+  }
+  .question-span{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 20px;
+    font-family: monospace;
+    text-transform: uppercase;
+  }
+  .question-input{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 20px;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+
+  }
+  .answer-input{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 10 20px;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+
+  }
+  .optionsDivPreview{
+    width: 100%;
+    height: 100%;
+  }
+  .ansOptionsDiv{
+    text-align: center;
+  }
+  .ansPreviewText{
+    font-size: 18px;
+    color: white;
+  }
+  .sayitAll{
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+  }
   .sub{
       padding-top: 20px;
   }
@@ -1678,6 +1841,8 @@
   box-shadow: 7px 7px 5px -5px rgba(0,0,0,0.27);
   transition: all 250ms;
   overflow: hidden;
+  width: 90%;
+  margin: 8px auto;
   }
 
   .submit::before {
@@ -1993,7 +2158,7 @@
       width: 90%;
     }
     #greetuser{
-      font-size: 15px;
+      font-size: 11px;
       font-weight: 600;
       /* height: 80px;
       display: grid;
@@ -2169,7 +2334,14 @@
 
   @media (max-width: 752px){
     
-
+    .add-quiz{
+      width: 40px;
+      height: 40px;
+    }
+    .add-quiz:hover{
+      width: 39px;
+      height: 39px;
+    }
     .header {
       top: 25%;
       left: 50%;

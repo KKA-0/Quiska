@@ -1,5 +1,5 @@
 <?php
-    $path_home = "../index.php";
+    $path_home = "../";
     $path_sayit = "./sayit.php";
     $path_quiz = "./quiz.php";
     $path_contact = "./contact.php";
@@ -30,8 +30,6 @@
     //setting ID
     $idFromSESSION = $_SESSION['id'];
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +51,7 @@
 ?>
     <div id="greetuser">
         <h2>Welcome Back, <?php echo $_SESSION["name"]; ?>!</h2>
+        <a href="./quiz/add.php" ><img class="add-quiz" src="https://img.icons8.com/ios-filled/50/plus-2-math.png" alt="plus-2-math"/></a>
     </div>
 <div class="container-dashboard">
     <center>
@@ -113,10 +112,11 @@
                         <?php
                         include_once('./../backend/private_cards.php');
                         ?> 
-            <div class="next-sayit">
-                    
-                        <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #000000;"></i>
+            <a href="./sayit/all.php">
+                <div class="next-sayit">
+                    <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #000000;"></i>
                 </div>
+            </a>
             </div>
         </div>
 
