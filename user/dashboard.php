@@ -51,7 +51,12 @@
 ?>
     <div id="greetuser">
         <h2>Welcome Back, <?php echo $_SESSION["name"]; ?>!</h2>
-        <a href="./quiz/add.php" ><img class="add-quiz" src="https://img.icons8.com/ios-filled/50/plus-2-math.png" alt="plus-2-math"/></a>
+        <a href="./quiz/add.php" >
+        <button class="DASHBOARD_CREATE">
+            <div class="sign_DASHBOARD_CREATE">+</div>
+            <div class="text_DASHBOARD_CREATE">Create</div>
+        </button>
+        </a> 
     </div>
 <div class="container-dashboard">
     <center>

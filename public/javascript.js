@@ -218,20 +218,24 @@ function addQuizOption() {
 	const nodeList = document.querySelectorAll(".answer-input");
 	const total_input = nodeList.length;
 	console.log(total_input);
+	const delbutton = document.getElementById("button");
+	const addbutton = document.getElementById("submit");
+
+	delbutton.style.display = "flex"
 
 	if (total_input === 2) {
 		$('.add-options').append(`<input type="text" onchange="previewTitleUpdate()" class="answer-input" id="OptionC" placeholder="Option C">`)
-		$('.optionsDivPreview').append(`<div class="option ansOptionsDiv">
+		$('.optionsDivPreview').append(`<div class="option ansOptionsDiv" id="optionDiv_C">
 	  <span class="ansPreviewText" id="ansPreviewText_C">Option C</span>
   </div>`)
 
 	} else if (total_input === 3) {
 		$('.add-options').append(`<input type="text" onchange="previewTitleUpdate()" class="answer-input" id="OptionD" placeholder="Option D">`)
-		$('.optionsDivPreview').append(`<div class="option ansOptionsDiv">
+		$('.optionsDivPreview').append(`<div class="option ansOptionsDiv" id="optionDiv_D">
 		<span class="ansPreviewText" id="ansPreviewText_D">Option D</span>
-	</div>`)
+		</div>`)
+		addbutton.style.display = "none"
 	} else {
-		alert("Maximum number of attempts reached");
 		console.log("Else is working");
 	}
 }
@@ -247,4 +251,24 @@ function previewTitleUpdate() {
 	$('#ansPreviewText_C').text(ansCvalue)
 	ansDvalue = $('#OptionD').val()
 	$('#ansPreviewText_D').text(ansDvalue)
+}
+
+function delQuizOption() {
+	const nodeList = document.querySelectorAll(".answer-input");
+	const delbutton = document.getElementById("button");
+	const addbutton = document.getElementById("submit");
+	const total_input = nodeList.length;
+	console.log(total_input);
+	if (total_input === 3) {
+		$("#OptionC").remove();
+		$("#optionDiv_C").remove();
+		delbutton.style.display = "none"
+		addbutton.style.display = "block"
+	} else if (total_input === 4) {
+		$("#OptionD").remove();
+		$("#optionDiv_D").remove();
+		addbutton.style.display = "block"
+	} else {
+		console.log("main jeet gya")
+	}
 }
