@@ -161,6 +161,29 @@ function preventDefault(data) {
 			})
 		}
 	}
+	else if(data == "sayit") {
+		var privMess = $("#sayitSubmit").val()
+		var userID = $("#userIDsayitSubmit").text()
+		if (privMess == "" || userID == "") {
+			$("#alert").css('display', 'initial')
+			$("#alert_text").text("Type a Message!")
+		}
+		else{
+			request = $.ajax({
+				url: './../backend/sayitSubmit.php',
+				type: 'post',
+				data: `id=${userID}&message=${privMess}`
+			});
+			request.done(function (data) {
+				console.log("Request Success", data);
+				$('#alert').css('display', 'initial');
+				$('#alert_text').text('Awesome! Your Comment Added!')
+				$('#sayitSubmit').val("")
+			})
+		}
+		$("#alert").css('display', 'initial')
+		$("#alert_text").text("Unknown Request!")
+	}
 	else {
 		$("#alert").css('display', 'initial')
 		$("#alert_text").text("Unknown Request!")
@@ -174,17 +197,21 @@ if (window.history.replaceState) {
 function preference() {
 	console.log("preference..");
 	if ($('#preference').prop('checked')) {
+		// Light Mode
+		localStorage.setItem("preference", "true");
+		$('#navbar').css('background', 'white');
+		$('#greetuser').css('color', 'black');
+		$('#navbar').css('color', 'black')
+		$('nav ul li .fcka').css('color', 'black')
+		$('body, .container-dashboard').css('background', 'whitesmoke')
+	} else {
+		// Dark Mode
+		localStorage.setItem("preference", "false");
+		$('#greetuser').css('color', 'white');
 		$('#navbar').css('background', '#0c0c0c');
 		$('#navbar').css('color', 'white')
 		$('nav ul li .fcka').css('color', 'white')
 		$('body, .container-dashboard').css('background', '#222222')
-		document.cookie = "preference=checked"
-	} else {
-		$('#navbar').css('background', 'white');
-		$('#navbar').css('color', 'black')
-		$('nav ul li .fcka').css('color', 'black')
-		$('body, .container-dashboard').css('background', 'whitesmoke')
-		document.cookie = "preference=unchecked"
 	}
 }
 
@@ -213,6 +240,11 @@ function sayitLinkCopy() {
 function closeTutorial() {
 	console.log("closeTutorial")
 	$(".quizOptionsSettings").css('display', 'none')
+}
+function closePreviewDiv() {
+	console.log("closePreviewDiv")
+	$(".previewDiv").css('display', 'none')
+	$(".imgShare").empty()
 }
 function addQuizOption() {
 	const nodeList = document.querySelectorAll(".answer-input");
@@ -272,3 +304,95 @@ function delQuizOption() {
 		console.log("main jeet gya")
 	}
 }
+
+function displayPreviewSayit(data){
+	console.log(data)
+	$(".previewDiv").css("display","initial")
+	$(".previewSayit_title").text(data)
+}
+
+function convertDivToImageAndDownload() {
+	// Get the DIV element.
+	const div = document.querySelector('.previewSayit_Div');
+	 $("#downloadImgBtn").css("display","none")
+	 $("i.fa.icons.fa-times-circle").css("display","none")
+	// Create a canvas element.
+	const canvas = document.createElement('canvas');
+  
+	// Set the canvas width and height to the DIV's width and height.
+	canvas.width = div.offsetWidth;
+	canvas.height = div.offsetHeight;
+  
+	// Render the DIV to the canvas.
+	html2canvas(div).then(canvas => {
+	  // Get the canvas image data as a base64 string.
+	  const imageData = canvas.toDataURL();
+  
+	  // Create a new anchor element and set its href attribute to the image data.
+	  const anchor = document.createElement('a');
+	  anchor.href = imageData;
+  
+	  // Set the anchor element's download attribute to the desired filename.
+	  anchor.download = 'preview.png';
+  
+	  // Click the anchor element to download the image.
+	  anchor.click();
+
+	});
+	$("#downloadImgBtn").css("display","block")
+	$("i.fa.icons.fa-times-circle").css("display","initial")
+  }
+  
+  function shareImage() {
+	const div = document.querySelector('.previewSayit_Div');
+	$("#downloadImgBtn").css("display", "none");
+	$("i.fa.icons.fa-times-circle").css("display", "none");
+	$("#shareImgBtn").css("display", "none");
+  
+	// Create a canvas element.
+	const canvas = document.createElement('canvas');
+  
+	// Set the canvas width and height to the DIV's width and height.
+	canvas.width = div.offsetWidth;
+	canvas.height = div.offsetHeight;
+  
+	// Render the DIV to the canvas.
+	html2canvas(div).then(canvas => {
+	  // Get the canvas image data as a base64 string.
+	  const imageData = canvas.toDataURL();
+  
+	  // Create a new anchor element and set its href attribute to the image data.
+	  const anchor = document.createElement('a');
+	  anchor.href = imageData;
+  
+	  // Create a new image element and set its src attribute to the image data.
+	  const image = document.createElement('img');
+	  image.src = imageData;
+  
+	  // Append the image to the `.previewSayit_card` element.
+	  $('.imgShare').append(image);
+	});
+  
+	$("#downloadImgBtn").css("display", "block");
+	$("i.fa.icons.fa-times-circle").css("display", "initial");
+	$("#shareImgBtn").css("display", "block");
+  }
+
+  function deleteCard(data) {
+	event.preventDefault();
+	console.log("delete", data)
+	request = $.ajax({
+		url: "./../../backend/deleteSayit.php",
+		type: "post",
+		data: `deleteID=${data}`
+	});
+	request.done(function (data) {
+		console.log(data)
+		$("#alert").css('display', 'initial')
+		$("#alert_text").text("Deleted Successfully")
+		location.reload(); 
+	})
+	request.fail(function (data) {
+		console.log(data)
+	})
+  }

@@ -13,10 +13,14 @@
 <html>
 
 <head>
+    <meta property="og:title" content="Quiska">
+    <meta property="og:image" content="./uiska.png">
+    <meta property="og:description" content="Welcome to the Anonymous Messaging and Quiz Website!">
     <meta charset="utf-8">
     <title>Quiska</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/style.css">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6516d05dd3a9920012124ab4&product=image-share-buttons&source=platform" async="async"></script>
     <script src="https://kit.fontawesome.com/9a28018dec.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
@@ -24,6 +28,7 @@
     <link rel="icon" type="image/x-icon" href="./user/images/logo.ico">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1db173a9e0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -90,8 +95,11 @@
     <?php
         require_once './public/components/alerts.php';
         require_once './public/components/footer.php';
+        require_once './public/components/meta.php';
     ?>
 
     <script src="./public/javascript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <?php include_once("./public/components/preference.php") ?>
+
 </body>

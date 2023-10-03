@@ -1,7 +1,9 @@
 {
     "require": {
         "google/apiclient": "^2.15.0",
-        "php": "7.4.8"
+        "php": "7.4.8",
+        "grpc/grpc": "^1.57",
+        "google/cloud-firestore": "^0.1.0"
     }
     
 }

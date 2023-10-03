@@ -130,8 +130,10 @@
     </div>
 </body>
 <?php
+    include_once('./../public/components/sayitPreview.php');
     require_once './../public/components/alerts.php';
     require_once './../public/components/footer.php';
+    include_once("./../public/components/preference.php")
 ?>
 <script type="text/javascript" src="./../public/javascript.js"></script>
 </html>

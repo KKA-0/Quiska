@@ -5,9 +5,13 @@ $query = "SELECT id, userid, message, created_at FROM `sayit` WHERE userid = ? O
     mysqli_stmt_bind_param($stmt, "s", $idFromSESSION);
     if(mysqli_stmt_execute($stmt)){
         mysqli_stmt_store_result($stmt);
+        if(mysqli_stmt_num_rows($stmt) == 0){
+            echo '<center style="margin: 80px auto;"> <img src="./../user/images/No data-amico.png" height="230" alt= "not found">
+            <h1 style="color: black;">No Sayit`s Found</h1> </center>';
+        }
         mysqli_stmt_bind_result($stmt, $id, $userid, $mess, $created_at);
         while(mysqli_stmt_fetch($stmt)){
-            echo '<div class="card" id='. $id .' style="width: 80%;" draggable>
+            echo '<div class="card" id='. $id .' style="width: 80%;" onclick="displayPreviewSayit(`'. $mess .'`)">
             <h3 class="card__title">Anomalous</h3>
             <p class="card__content">'. $mess .'</p>
             <div class="card__date">

@@ -1521,6 +1521,7 @@
 
   .cssbuttons-io-button:hover .icon {
     width: calc(100% - 0.6em);
+    cursor: pointer;
   }
 
   .cssbuttons-io-button .icon svg {
@@ -1626,7 +1627,6 @@
     width: 210px;
     font-family: "Arial";
     padding: 1rem;
-    cursor: pointer;
     border-radius: var(--border-radius);
     background: #f1f1f3;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
@@ -1643,7 +1643,6 @@
     color: var(--secondary-color);
     font-size: 0.86rem;
   }
-
   .card .card__title {
     padding: 0;
     font-size: 1.3rem;
@@ -2115,7 +2114,7 @@
     cursor: pointer;
   }
   .textarea-container{
-    margin: 0 10px;
+    margin: 0 25px;
   }
   textarea{
     height: 150px;
@@ -2143,6 +2142,9 @@
   }
   .form-sayit-wel{
     height: 40px;
+    font-family: sans-serif;
+    margin: 15px;
+    font-weight: 600;
   }
   .center-div{
     margin: auto;
@@ -2336,7 +2338,158 @@
     transition-duration: .3s;
   }
 
+  .previewDiv{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    margin: auto;
+  }
+ .previewSayit_Div{
+  background-color: #183153;
+  border: #000;
+  height: fit-content;
+  width: 80%;
+  max-width: 350px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 10px 0 30px 0;
+  z-index: 100;
+ }
 
+ .previewSayit_card {
+  --background: linear-gradient(to left, #7257fa 0%, #ea5358 100%);
+  width: 250px;
+  height: 340px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+  margin: auto;
+ }
+ 
+ .previewSayit_card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity .5s;
+ }
+ 
+ .previewSayit_card-info {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: .7rem;
+ }
+ 
+ .previewSayit_card .previewSayit_title {
+  font-weight: bold;
+  letter-spacing: .1em;
+ }
+ 
+ /*Hover*/
+ .previewSayit_card:hover::after {
+  opacity: 0;
+ }
+ 
+ .previewSayit_card .previewSayit_card-info {
+  color: white;
+  transition: color 1s;
+ }
+
+ .theme {
+  --bg-color: #111;
+  --main-color: #fefefe;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  top: 15px;
+}
+
+.input {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% -13px);
+  left: calc(50% -13px);
+  width: 26px;
+  height: 26px;
+}
+
+.icon.icon-moon {
+  fill: var(--main-color);
+}
+
+.icon.icon-sun {
+  stroke: var(--main-color);
+  display: none;
+}
+
+.input:checked ~ .icon.icon-sun {
+  display: block;
+}
+
+.input:checked ~ .icon.icon-moon {
+  display: none;
+}
+
+.theme:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.card__delete{
+  display: flex;
+  flex-wrap: wrap;
+  height: 35px;
+  width: 35px;
+  background-image: url(./../user/images/delete.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.card__delete:hover{
+  height: 30px;
+  width: 30px;
+  background-image: url(./../user/images/delete.gif);
+}
 
   @media (max-width: 1015px){
     .image-svg{
@@ -2558,7 +2711,10 @@
   }
 
   @media (max-width: 752px){
-    
+    .form{
+      margin: 200px auto;
+    }
+
     .add-quiz{
       width: 40px;
       height: 40px;
@@ -2586,9 +2742,6 @@
     }
     .header{
       color:white;
-    }
-    .form {
-      margin: 25px auto;
     }
     #alert{
       left: 40%;
@@ -2633,3 +2786,54 @@
       bottom: 0;
     }
   }
+
+  .icons{
+    color: white;
+    font-size: 35px;
+    margin: 12px;
+    cursor: pointer;
+  }
+
+  #downloadImgBtn{
+    padding: 10px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 16px;
+    overflow: hidden;
+    width: 75%;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+  }
+  .imgShare{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .imgShare > img {
+    width: 100px;
+    height: 100px;
+  }
+  #shareImgBtn{
+    padding: 10px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 16px;
+    overflow: hidden;
+    width: 75%;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+  }
+

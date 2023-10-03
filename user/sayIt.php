@@ -3,9 +3,15 @@
     $path_sayit = "./sayit.php";
     $path_quiz = "./quiz.php";
     $path_contact = "./contact.php";
+    $logout = "./../backend/logout.php";
     $join = 1;
-
+    session_start();
     include_once('./../config/config.php');
+    $id = @$_SESSION['id'];
+    if(isset($id)){
+        $join = 0;
+    }
+    
     include_once('./../public/components/alerts.php');
 
 
@@ -29,20 +35,6 @@
       header("location: ./../index.php");
     }
 
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-      $sql = "INSERT INTO sayit (userid, message) VALUES (?, ?)";
-      $stmt = mysqli_prepare($con, $sql);
-      $message = trim($_POST['message']);
-      mysqli_stmt_bind_param($stmt, "ss",$id, $message);
-      if(mysqli_stmt_execute($stmt)){
-        
-      }else{
-        echo "Something went wrong...";
-     }
-     mysqli_stmt_close($stmt);
-     mysqli_close($con);
-    }
-
 ?>
 
 <!DOCTYPE html>
@@ -63,16 +55,18 @@
 <?php
     require_once './../public/components/navbar.php';
 ?>
-  <form class="form center-div" action="" method="post">
+  <form class="form center-div" action="./../backend/sayitSubmit.php" method="post">
     <div class="form-sayit-wel">Hi, Sent a Private Message. Receiver will don't know who sent it</div>
+    <h1 id="userIDsayitSubmit" style="display: none;"> <?php echo $id ?> </h1>
     <div class="textarea-container">
-      <textarea style="resize: none;" type="text" name="message" placeholder="Send Them anonymous message... 😉"></textarea>
+      <textarea style="resize: none;" type="text" id="sayitSubmit" name="message" placeholder="Send Them anonymous message... 😉"></textarea>
     </div>
-    <button type="submit" class="submit">Send</button>
+    <button type="submit" onclick="preventDefault('sayit')"  class="submit">Send</button>
   </form>
 </body>
 <?php
     require_once './../public/components/footer.php';
+    include_once("./../public/components/preference.php")
 ?>
 <script type="text/javascript" src="./../public/javascript.js"></script>
 </html>
