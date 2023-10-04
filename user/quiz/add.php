@@ -13,6 +13,8 @@
             exit;
         }
 include_once('./../../public/components/navbar.php');
+header("Access-Control-Allow-Origin: *");
+
 ?>
 <link rel="stylesheet" href="./../../public/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -55,6 +57,10 @@ include_once('./../../public/components/navbar.php');
             </div>
         </div>
         <div class="quizLayers">
+                <button class="buttonADD" onclick="quiz('add')" type="button">
+                    <span class="button__textADD">Share</span>
+                    <img class="svg" width="24" height="20" src="https://img.icons8.com/ios-filled/50/paper-plane.png" alt="paper-plane"/>
+                </button>
             <div class="addLayer">
                 <button class="buttonADD" type="button">
                     <span class="button__textADD">Add New Question</span>
@@ -65,4 +71,5 @@ include_once('./../../public/components/navbar.php');
     </div>
 </body>
 <script type="text/javascript" src="./../../public/javascript.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
 </html>

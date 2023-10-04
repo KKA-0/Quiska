@@ -312,87 +312,167 @@ function displayPreviewSayit(data){
 }
 
 function convertDivToImageAndDownload() {
-	// Get the DIV element.
-	const div = document.querySelector('.previewSayit_Div');
-	 $("#downloadImgBtn").css("display","none")
-	 $("i.fa.icons.fa-times-circle").css("display","none")
-	// Create a canvas element.
-	const canvas = document.createElement('canvas');
-  
-	// Set the canvas width and height to the DIV's width and height.
-	canvas.width = div.offsetWidth;
-	canvas.height = div.offsetHeight;
-  
-	// Render the DIV to the canvas.
-	html2canvas(div).then(canvas => {
-	  // Get the canvas image data as a base64 string.
-	  const imageData = canvas.toDataURL();
-  
-	  // Create a new anchor element and set its href attribute to the image data.
-	  const anchor = document.createElement('a');
-	  anchor.href = imageData;
-  
-	  // Set the anchor element's download attribute to the desired filename.
-	  anchor.download = 'preview.png';
-  
-	  // Click the anchor element to download the image.
-	  anchor.click();
+    // Get the DIV element.
+    const div = document.querySelector('.previewSayit_Div');
+    $("#downloadImgBtn").css("display", "none");
+    $("i.fa.icons.fa-times-circle").css("display", "none");
+    $("#shareImgBtn").css("display", "none");
 
-	});
-	$("#downloadImgBtn").css("display","block")
-	$("i.fa.icons.fa-times-circle").css("display","initial")
-  }
-  
-  function shareImage() {
-	const div = document.querySelector('.previewSayit_Div');
-	$("#downloadImgBtn").css("display", "none");
-	$("i.fa.icons.fa-times-circle").css("display", "none");
-	$("#shareImgBtn").css("display", "none");
-  
-	// Create a canvas element.
-	const canvas = document.createElement('canvas');
-  
-	// Set the canvas width and height to the DIV's width and height.
-	canvas.width = div.offsetWidth;
-	canvas.height = div.offsetHeight;
-  
-	// Render the DIV to the canvas.
-	html2canvas(div).then(canvas => {
-	  // Get the canvas image data as a base64 string.
-	  const imageData = canvas.toDataURL();
-  
-	  // Create a new anchor element and set its href attribute to the image data.
-	  const anchor = document.createElement('a');
-	  anchor.href = imageData;
-  
-	  // Create a new image element and set its src attribute to the image data.
-	  const image = document.createElement('img');
-	  image.src = imageData;
-  
-	  // Append the image to the `.previewSayit_card` element.
-	  $('.imgShare').append(image);
-	});
-  
-	$("#downloadImgBtn").css("display", "block");
-	$("i.fa.icons.fa-times-circle").css("display", "initial");
-	$("#shareImgBtn").css("display", "block");
-  }
+    // Create a canvas element with a higher resolution.
+    const canvas = document.createElement('canvas');
+    const scale = 4; // You can adjust this scale factor for higher resolution.
+    canvas.width = div.offsetWidth * scale;
+    canvas.height = div.offsetHeight * scale;
+    canvas.style.width = div.offsetWidth + 'px';
+    canvas.style.height = div.offsetHeight + 'px';
+    const context = canvas.getContext('2d');
+    context.scale(scale, scale);
 
-  function deleteCard(data) {
-	event.preventDefault();
-	console.log("delete", data)
-	request = $.ajax({
-		url: "./../../backend/deleteSayit.php",
-		type: "post",
-		data: `deleteID=${data}`
-	});
-	request.done(function (data) {
+    // Create a configuration object for html2canvas.
+    const config = {
+        scale: scale, // Set the scale factor for higher resolution.
+        useCORS: true, // Allow images from different origins (useful for external images).
+    };
+
+    // Render the DIV to the canvas with the specified configuration.
+    html2canvas(div, config).then(canvas => {
+        // Get the canvas image data as a base64 string.
+        const imageData = canvas.toDataURL();
+
+        // Create a new anchor element and set its href attribute to the image data.
+        const anchor = document.createElement('a');
+        anchor.href = imageData;
+
+        // Set the anchor element's download attribute to the desired filename.
+        anchor.download = 'preview.png';
+
+        // Click the anchor element to download the image.
+        anchor.click();
+
+        // Restore the display of buttons/icons after image generation.
+        $("#downloadImgBtn").css("display", "block");
+        $("i.fa.icons.fa-times-circle").css("display", "initial");
+        $("#shareImgBtn").css("display", "block");
+    });
+}
+
+function shareImage() {
+    const div = document.querySelector('.previewSayit_Div');
+    $("#downloadImgBtn").css("display", "none");
+    $("i.fa.icons.fa-times-circle").css("display", "none");
+    $("#shareImgBtn").css("display", "none");
+	$(".previewSayit_Div").css("min-width", "400px");
+
+    // Create a canvas element with a higher resolution.
+    const canvas = document.createElement('canvas');
+    const scale = 4; // You can adjust this scale factor for higher resolution.
+    canvas.width = div.offsetWidth * scale;
+    canvas.height = div.offsetHeight * scale;
+    canvas.style.width = div.offsetWidth + 'px';
+    canvas.style.height = div.offsetHeight + 'px';
+    const context = canvas.getContext('2d');
+    context.scale(scale, scale);
+
+    // Create a configuration object for html2canvas.
+    const config = {
+        scale: scale, // Set the scale factor for higher resolution.
+        useCORS: true, // Allow images from different origins (useful for external images).
+    };
+
+    // Render the DIV to the canvas with the specified configuration.
+    html2canvas(div, config).then(canvas => {
+        // Get the canvas image data as a base64 string.
+        const imageData = canvas.toDataURL();
+
+        // Create a Blob from the base64 data.
+        const blob = dataURItoBlob(imageData);
+
+        // Create a File object from the Blob.
+        const file = new File([blob], 'preview.png', { type: 'image/png' });
+
+        // Create a new anchor element and set its href attribute to the image data.
+        const anchor = document.createElement('a');
+        anchor.href = URL.createObjectURL(file);
+        anchor.download = 'preview.png';
+
+        const filesArray = [file];
+        if (navigator.canShare && navigator.canShare({ files: filesArray })) {
+            navigator.share({
+                // text: 'quisk_Sayit',
+                files: filesArray,
+                // title: 'quisk_Sayit',
+                // url: 'some_url'
+            });
+        } else {
+            $("#alert").css('display', 'initial');
+            $("#alert_text").text("Does not support on this Browser. Please use Different Browsers");
+        }
+
+        // Restore the display of buttons/icons after image generation.
+		$(".previewSayit_Div").css("min-width", "350px");
+        $("#shareImgBtn").css("display", "block");
+        $("#downloadImgBtn").css("display", "block");
+        $("i.fa.icons.fa-times-circle").css("display", "initial");
+    });
+}
+
+function dataURItoBlob(dataURI) {
+	const byteString = atob(dataURI.split(',')[1]);
+	const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+	const ab = new ArrayBuffer(byteString.length);
+	const ia = new Uint8Array(ab);
+	for (let i = 0; i < byteString.length; i++) {
+		ia[i] = byteString.charCodeAt(i);
+	}
+	return new Blob([ab], { type: mimeString });
+}
+
+function deleteCard(data) {
+event.preventDefault();
+console.log("delete", data)
+request = $.ajax({
+	url: "./../../backend/deleteSayit.php",
+	type: "post",
+	data: `deleteID=${data}`
+});
+request.done(function (data) {
+	console.log(data)
+	$("#alert").css('display', 'initial')
+	$("#alert_text").text("Deleted Successfully")
+	location.reload(); 
+})
+request.fail(function (data) {
+	console.log(data)
+})
+}
+
+function quiz(data){
+	if(data === "add"){
+		ques = $('#titlePreviewText').text()
+		optionA = $('#ansPreviewText_A').text()
+		optionB = $('#ansPreviewText_B').text()
+		console.log(ques, optionA, optionB)
+		data = [
+			{
+				"index": 1,
+				"question": `${ques}`,
+				"options": {
+					"optionA": `${optionA}`,
+					"optionB": `${optionB}`
+				},
+				"answer": `optionB`
+			}
+		
+		]
 		console.log(data)
-		$("#alert").css('display', 'initial')
-		$("#alert_text").text("Deleted Successfully")
-		location.reload(); 
-	})
-	request.fail(function (data) {
-		console.log(data)
-	})
-  }
+		// axios.post('http://127.0.0.1:3000/add', {
+		// 	// ques, optionA, optionB
+		//   })
+		//   .then(function (response) {
+		// 	console.log(response);
+		//   })
+		//   .catch(function (error) {
+		// 	console.log(error);
+		//   });
+	}
+}

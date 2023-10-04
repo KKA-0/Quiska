@@ -1,0 +1,25 @@
+[
+    {
+        "index": 1,
+        "question": "What is the Capital of India?",
+        "options": {
+            "optionA": "Gwalior",
+            "optionB": "Delhi"
+        },
+        "answer": "optionB"
+    }
+
+]
+
+
+[
+    {
+        "quizSequence": 1,
+        "takenBy": 0,
+    }
+
+]
+
+
+
+

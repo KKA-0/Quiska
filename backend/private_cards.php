@@ -6,8 +6,8 @@ $query = "SELECT id, userid, message, created_at FROM `sayit` WHERE userid = ? O
     if(mysqli_stmt_execute($stmt)){
         mysqli_stmt_store_result($stmt);
         if(mysqli_stmt_num_rows($stmt) == 0){
-            echo '<center style="margin: 80px auto;"> <img src="./../user/images/No data-amico.png" height="230" alt= "not found">
-            <h1 style="color: black;">No Sayit`s Found</h1> </center>';
+            echo '<center style="margin: 80px auto;"> <img src="./../user/images/No data-amico.png" height="200" alt= "not found">
+            <h1 style="color: black;">No Sayit`s Found</h1><br><h5>Share your Link on socials to get sayit`s</h5> </center>';
         }
         mysqli_stmt_bind_result($stmt, $id, $userid, $mess, $created_at);
         while(mysqli_stmt_fetch($stmt)){

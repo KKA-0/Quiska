@@ -17,12 +17,12 @@ if (!isset($_SESSION['id'])) {
 include_once('./../../public/components/navbar.php');
 ?>
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/1db173a9e0.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://kit.fontawesome.com/9a28018dec.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./../../public/style.css">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 

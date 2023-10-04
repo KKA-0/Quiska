@@ -1,5 +1,7 @@
 
-  html{
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@600&display=swap');
+ 
+ html{
       scroll-behavior: smooth;
   }
   *{
@@ -2350,8 +2352,8 @@
   background-color: #183153;
   border: #000;
   height: fit-content;
-  width: 80%;
-  max-width: 350px;
+  width: 50%;
+  min-width: 350px;
   position: absolute;
   left: 0;
   right: 0;
@@ -2364,8 +2366,8 @@
 
  .previewSayit_card {
   --background: linear-gradient(to left, #7257fa 0%, #ea5358 100%);
-  width: 250px;
-  height: 340px;
+  width: 300px;
+  height: 200px;
   padding: 5px;
   border-radius: 1rem;
   overflow: visible;
@@ -2375,23 +2377,7 @@
   z-index: 1;
   margin: auto;
  }
- 
- .previewSayit_card::after {
-  position: absolute;
-  content: "";
-  top: 30px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  transform: scale(0.8);
-  filter: blur(25px);
-  background: #f7ba2b;
-  background: var(--background);
-  transition: opacity .5s;
- }
- 
+
  .previewSayit_card-info {
   --color: #181818;
   background: var(--color);
@@ -2406,10 +2392,21 @@
  }
  
  .previewSayit_card .previewSayit_title {
-  font-weight: bold;
   letter-spacing: .1em;
+  padding: 20px;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 800;
+  font-size: 100%;
  }
- 
+ .previewCredits{
+  color: white;
+  text-align: center;
+  font-family: 'Gabarito', sans-serif;
+ }
+ .logoPreview{
+  position: absolute;
+  bottom: 8px;
+ }
  /*Hover*/
  .previewSayit_card:hover::after {
   opacity: 0;
@@ -2478,7 +2475,7 @@
 .card__delete{
   display: flex;
   flex-wrap: wrap;
-  height: 35px;
+  height: 30px;
   width: 35px;
   background-image: url(./../user/images/delete.png);
   background-repeat: no-repeat;
@@ -2805,7 +2802,7 @@
     font-weight: 1000;
     font-size: 16px;
     overflow: hidden;
-    width: 75%;
+    width: 300px;
     margin: 10px auto;
     display: block;
     cursor: pointer;
@@ -2831,7 +2828,7 @@
     font-weight: 1000;
     font-size: 16px;
     overflow: hidden;
-    width: 75%;
+    width: 300px;
     margin: 10px auto;
     display: block;
     cursor: pointer;

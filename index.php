@@ -18,6 +18,7 @@
     <meta property="og:description" content="Welcome to the Anonymous Messaging and Quiz Website!">
     <meta charset="utf-8">
     <title>Quiska</title>
+    <meta name="description" content="Welcome to the Anonymous Messaging and Quiz Website!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/style.css">
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6516d05dd3a9920012124ab4&product=image-share-buttons&source=platform" async="async"></script>
